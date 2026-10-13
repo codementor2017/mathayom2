@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 2 · Chapter 1: Boolean Logic</title>
+  <!-- External CSS (inside css folder) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon / emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>">
+</head>
+<body>
+
+  <div class="book-container lesson-page">
+
+    <!-- ===== HEADER / TITLE ===== -->
+    <header class="lesson-header">
+      <div class="lesson-badge">Unit 2 · Chapter 1</div>
+      <h1>Boolean Logic</h1>
+      <p class="lesson-subhead">✅❌ True or False? Every comparison gives an answer!</p>
+
+      <div class="lesson-meta">
+        <span class="meta-pill">⏱️ 100 minutes</span>
+        <span class="meta-pill">🎯 Grade 8</span>
+        <span class="meta-pill">✅ Boolean Logic</span>
+      </div>
+    </header>
+
+    <!-- ===== IMAGE (VISIBLE PLACEHOLDER) ===== -->
+    <!--
+      🖼️ IMAGE INSTRUCTIONS FOR THE TEACHER:
+      Replace the <div class="lesson-image-display"> with:
+      <img src="images/unit2-ch1-hero.png" alt="Cartoon lion holding two signs labeled True and False" class="lesson-image-display">
+
+      Recommended image (illustration):
+      A bright, flat cartoon in Lion King style. A young lion cub (like Simba) stands in the
+      center, holding two big colorful signs — one green sign says "TRUE ✅" and one red
+      sign says "FALSE ❌". Around him, floating comparison symbols: >, <, ==, !=, >=, <=.
+      A wise older lion (Rafiki) with glasses smiles and holds a small chalkboard with
+      "5 > 3 ?" written on it. Background: savanna, acacia trees, floating icons
+      (✅ ❌ ⚖️). Caption at bottom: “Every comparison has an answer!”
+      Size: 1200 × 400 px (wide banner).
+    -->
+    <div class="lesson-image-display" role="img" aria-label="Cartoon lion holding two signs labeled True and False">
+      <div class="image-placeholder-inner">
+        <div class="image-placeholder-icon">🖼️</div>
+        <div class="image-placeholder-text">
+          <strong>IMAGE PLACEHOLDER — Unit 2, Chapter 1</strong>
+          <p>
+            A bright, flat cartoon in Lion King style. A young lion cub (like Simba) stands in the
+            center, holding two big colorful signs — one green sign says "TRUE ✅" and one red
+            sign says "FALSE ❌". Around him, floating comparison symbols: &gt;, &lt;, ==, !=, &gt;=, &lt;=.
+            A wise older lion (Rafiki) with glasses smiles and holds a small chalkboard with
+            "5 &gt; 3 ?" written on it. Background: savanna, acacia trees, floating icons
+            (✅ ❌ ⚖️). Caption: “Every comparison has an answer!”
+          </p>
+          <p class="image-placeholder-hint">Recommended size: 1200 × 400 px (wide banner)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== LESSON PLAN OVERVIEW ===== -->
+    <section class="lesson-section lesson-plan-overview">
+      <h2>📅 Lesson Plan Overview (100 minutes)</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">0–10 min</div>
+          <div class="timeline-content"><strong>Warm-Up:</strong> True or False? Quick statement game.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">10–30 min</div>
+          <div class="timeline-content"><strong>Direct Teaching:</strong> Booleans + comparison operators.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">30–50 min</div>
+          <div class="timeline-content"><strong>Guided Practice:</strong> Predicting Boolean results in Python.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">50–60 min</div>
+          <div class="timeline-content"><strong>Break:</strong> Stretch, hydrate, brain reset 🦁</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">60–85 min</div>
+          <div class="timeline-content"><strong>Group Activity:</strong> Boolean Scavenger Hunt + real-world comparisons.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">85–95 min</div>
+          <div class="timeline-content"><strong>Sharing:</strong> Groups present their code.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">95–100 min</div>
+          <div class="timeline-content"><strong>Exit Ticket:</strong> One-sentence summary + practice.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LESSON CONTENT ===== -->
+    <div class="lesson-content">
+
+      <!-- Section 1.1 -->
+      <section class="lesson-section">
+        <h2>1.1 True or False? <span class="time-tag">⏱️ 0–10 min</span></h2>
+        <p>Read each statement. Decide if it is <strong>True</strong> or <strong>False</strong>.</p>
+
+        <ul class="cute-list">
+          <li>5 &gt; 3</li>
+          <li>10 = 10</li>
+          <li>7 &lt; 2</li>
+          <li>The sky is green.</li>
+          <li>You are in Grade 8.</li>
+        </ul>
+
+        <p>These statements have only two possible answers: <strong>True</strong> or <strong>False</strong>.</p>
+        <p>In programming, we call these values <strong>Boolean</strong>. A Boolean is a value that is either True or False. Every comparison produces a Boolean value.</p>
+
+        <div class="think-box">
+          <strong>🗣️ Think–Pair–Share (2 minutes):</strong>
+          <p>Can you think of any other statement that can ONLY be True or False? Share with your partner.</p>
+        </div>
+      </section>
+
+      <!-- Section 1.2 -->
+      <section class="lesson-section">
+        <h2>1.2 Comparison Operators <span class="time-tag">⏱️ 10–20 min</span></h2>
+        <p>Python uses special symbols to compare values. These are called <strong>comparison operators</strong>.</p>
+
+        <div class="key-words-table">
+          <div class="key-word-row header">
+            <div>Operator</div>
+            <div>Meaning</div>
+          </div>
+          <div class="key-word-row">
+            <div>==</div>
+            <div>equal to</div>
+          </div>
+          <div class="key-word-row">
+            <div>!=</div>
+            <div>not equal to</div>
+          </div>
+          <div class="key-word-row">
+            <div>&gt;</div>
+            <div>greater than</div>
+          </div>
+          <div class="key-word-row">
+            <div>&lt;</div>
+            <div>less than</div>
+          </div>
+          <div class="key-word-row">
+            <div>&gt;=</div>
+            <div>greater than or equal to</div>
+          </div>
+          <div class="key-word-row">
+            <div>&lt;=</div>
+            <div>less than or equal to</div>
+          </div>
+        </div>
+
+        <p style="margin-top:1rem;">Here are some examples in Python:</p>
+
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.8;">
+          print(5 &gt; 3)       # True<br>
+          print(10 == 10)    # True<br>
+          print(7 &lt; 2)       # False<br>
+          print(4 != 4)      # False
+        </div>
+
+        <p style="margin-top:1rem;">Every comparison produces a Boolean value.</p>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Remind students that <code>==</code> is different from <code>=</code>. <code>=</code> assigns a value; <code>==</code> compares two values.
+        </div>
+      </section>
+
+      <!-- Section 1.3 -->
+      <section class="lesson-section">
+        <h2>1.3 Using Booleans in Decisions <span class="time-tag">⏱️ 20–30 min</span></h2>
+        <p>Booleans are used to make decisions in programs. Here is an example:</p>
+
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.8;">
+          age = 14<br><br>
+          if age &gt;= 13:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;print("You are a teenager.")
+        </div>
+
+        <p style="margin-top:1rem;">The <code>if</code> statement checks if the condition is True. If it is, the program runs the code inside.</p>
+
+        <div class="think-box">
+          <strong>🗣️ Quick Check (2 minutes):</strong>
+          <p>What would the program print if <code>age = 10</code>? Why?</p>
+        </div>
+      </section>
+
+      <!-- Section 1.4 -->
+      <section class="lesson-section">
+        <h2>1.4 Predicting Boolean Results <span class="time-tag">⏱️ 30–50 min</span></h2>
+        <p><strong>Let's practice.</strong> What will each of these print?</p>
+
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.9;">
+          a = 10<br>
+          b = 5<br><br>
+          print(a &gt; b)          # True<br>
+          print(a == b)         # False<br>
+          print(a != b)         # True<br>
+          print(a &lt;= 10)        # True<br>
+          print(b &gt;= 10)        # False<br>
+          print(a + b &gt; 12)     # True<br>
+          print(a - b == 5)     # True<br>
+          print(a * 2 &gt; b * 4)  # True<br>
+          print(a / 2 == b)     # True<br>
+          print(a % 3 == 1)     # True
+        </div>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Have students cover the comments with their hand and predict each result before revealing. Then run the code live in Python to confirm.
+        </div>
+      </section>
+
+      <!-- ===== BREAK ===== -->
+      <section class="lesson-section break-box">
+        <h2>☕ Break Time <span class="time-tag">⏱️ 50–60 min</span></h2>
+        <p>Stretch, hydrate, and reset your brain. When you return, you'll go on a Boolean Scavenger Hunt! 🦁</p>
+      </section>
+
+      <!-- Section 1.5 Activity -->
+      <section class="lesson-section activity-box">
+        <h2>1.5 Group Activity: Boolean Scavenger Hunt <span class="time-tag">⏱️ 60–85 min</span></h2>
+        <p><strong>Work with a partner.</strong> Write a Python program that compares real-world values:</p>
+
+        <ul class="cute-list">
+          <li>The speed of a car vs. the speed limit.</li>
+          <li>The temperature vs. the freezing point.</li>
+          <li>The height of two students.</li>
+          <li>The price of two items.</li>
+          <li>The age of two people.</li>
+        </ul>
+
+        <p><strong>Define the variables and print the Boolean result of each comparison.</strong></p>
+
+        <p><strong>Example starter:</strong></p>
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.8;">
+          car_speed = 80<br>
+          speed_limit = 60<br>
+          print(car_speed &gt; speed_limit)  # True
+        </div>
+
+        <div class="group-roles">
+          <h4>👥 Suggested Group Roles</h4>
+          <ul class="cute-list">
+            <li><strong>Writer:</strong> types the code.</li>
+            <li><strong>Predictor:</strong> predicts the result before running.</li>
+            <li><strong>Runner:</strong> executes the code and checks output.</li>
+            <li><strong>Presenter:</strong> explains the findings to the class.</li>
+          </ul>
+        </div>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Encourage students to use at least <strong>two</strong> comparison operators per example. Challenge them to use <code>!=</code> and <code>&lt;=</code> at least once.
+        </div>
+      </section>
+
+      <!-- Section 1.5b Sharing -->
+      <section class="lesson-section">
+        <h2>1.5b Sharing &amp; Presentations <span class="time-tag">⏱️ 85–95 min</span></h2>
+        <p>Each pair will share their Boolean Scavenger Hunt code with the class.</p>
+        <p><strong>As you listen, ask yourself:</strong></p>
+        <ul class="cute-list">
+          <li>Did they use the correct comparison operators?</li>
+          <li>Are their predictions correct?</li>
+          <li>Did they test at least 5 different comparisons?</li>
+        </ul>
+
+        <div class="think-box">
+          <strong>🗣️ Peer Feedback:</strong>
+          <p>After each presentation, give one <em>star</em> (something you liked) and one <em>wish</em> (something that could be improved).</p>
+        </div>
+      </section>
+
+      <!-- Section 1.6 Summary -->
+      <section class="lesson-section summary-box">
+        <h2>1.6 Chapter Summary <span class="time-tag">⏱️ 95–97 min</span></h2>
+        <ul class="cute-list">
+          <li>A Boolean is a value that is either True or False.</li>
+          <li>Comparison operators produce Boolean values.</li>
+          <li>Booleans are used in <code>if</code> statements to make decisions.</li>
+          <li>Every comparison produces a Boolean result.</li>
+        </ul>
+      </section>
+
+      <!-- Section 1.7 Key Words -->
+      <section class="lesson-section">
+        <h2>1.7 Key Words</h2>
+        <div class="key-words-table">
+          <div class="key-word-row header">
+            <div>Word</div>
+            <div>Meaning</div>
+          </div>
+          <div class="key-word-row">
+            <div>Boolean</div>
+            <div>A value that is either True or False</div>
+          </div>
+          <div class="key-word-row">
+            <div>True</div>
+            <div>A correct statement</div>
+          </div>
+          <div class="key-word-row">
+            <div>False</div>
+            <div>An incorrect statement</div>
+          </div>
+          <div class="key-word-row">
+            <div>Comparison operator</div>
+            <div>A symbol used to compare values</div>
+          </div>
+          <div class="key-word-row">
+            <div>Expression</div>
+            <div>A combination of values and operators</div>
+          </div>
+          <div class="key-word-row">
+            <div>Logic</div>
+            <div>Reasoning based on rules</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 1.8 Practice + Exit Ticket -->
+      <section class="lesson-section practice-box">
+        <h2>1.8 Practice &amp; Exit Ticket <span class="time-tag">⏱️ 97–100 min</span></h2>
+        <p><strong>Homework:</strong> Write 5 comparison expressions and their Boolean results.</p>
+
+        <div class="exit-ticket">
+          <h4>🎟️ Exit Ticket — Complete before you leave</h4>
+          <p>In one sentence, explain what a Boolean is.</p>
+          <p>Then write the result of each comparison:</p>
+          <ul class="cute-list">
+            <li>8 &gt; 5 → ______________________</li>
+            <li>4 == 4 → ______________________</li>
+            <li>7 != 7 → ______________________</li>
+            <li>3 &lt;= 2 → ______________________</li>
+          </ul>
+        </div>
+
+        <p class="reflection-prompt">🦁 <em>“Every comparison tells a story — True or False.”</em></p>
+      </section>
+
+    </div> <!-- end lesson-content -->
+
+    <!-- ===== TEACHER ANNOUNCEMENT BOX (grows with content) ===== -->
+    <div class="announcement-box" id="teacherAnnouncement">
+      <h3 class="announcement-title">📢 Announcements</h3>
+      <ol class="announcement-list">
+        <li><em>Announcement space — your teacher will add messages here later.</em></li>
+      </ol>
+    </div>
+
+    <!-- ===== NAVIGATION / FOOTER ===== -->
+    <div class="lesson-nav">
+      <a href="unit2-intro.html" class="nav-button back-to-index">⬅️ Previous: Unit 2 Intro</a>
+      <span class="nav-spacer"></span>
+      <a href="unit2-ch2.html" class="nav-button next-lesson">Next: Chapter 2 ➡️</a>
+    </div>
+
+    <div class="footer-note" style="margin-top: 2rem;">
+      <span>🦁</span> Unit 2 · Chapter 1 — Boolean Logic <span>✅</span>
+    </div>
+
+  </div> <!-- end book-container -->
+
+  <!-- External JavaScript (inside js folder) -->
+  <script src="js/script.js"></script>
+</body>
+</html>

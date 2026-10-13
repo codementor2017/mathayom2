@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 1 · Chapter 10: Your Project</title>
+  <!-- External CSS (inside css folder) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon / emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>">
+</head>
+<body>
+
+  <!-- Main container: consistent with index page -->
+  <div class="book-container lesson-page">
+
+    <!-- ===== HEADER / TITLE ===== -->
+    <header class="lesson-header">
+      <div class="lesson-badge">Unit 1 · Chapter 10</div>
+      <h1>Your Project</h1>
+      <p class="lesson-subhead">🏆 Show what you know — design a complete computational thinking solution!</p>
+
+      <!-- Lesson meta: duration + focus -->
+      <div class="lesson-meta">
+        <span class="meta-pill">⏱️ 100 minutes</span>
+        <span class="meta-pill">🎯 Grade 8</span>
+        <span class="meta-pill">🏆 Project &amp; Presentation</span>
+      </div>
+    </header>
+
+    <!-- ===== IMAGE (VISIBLE PLACEHOLDER) ===== -->
+    <!--
+      🖼️ IMAGE INSTRUCTIONS FOR THE TEACHER:
+      Replace the <div class="lesson-image-display"> with:
+      <img src="images/unit1-ch10-hero.png" alt="Cartoon lion proudly presenting a project poster to the class" class="lesson-image-display">
+
+      Recommended image (illustration):
+      A bright, flat cartoon in Lion King style. A young lion cub (like Simba) stands proudly
+      in front of a large poster board. The poster shows all four pillars as colorful columns
+      (🧩🔍🎯📋), a decomposition tree, a pattern chart, an abstraction grid, and a numbered
+      algorithm list. A trophy sits on the table beside the poster. Classmates (zebras,
+      meerkats, giraffes) watch and clap. A wise older lion (Rafiki) smiles from the side.
+      Background: savanna-themed classroom with acacia wood desks, floating icons
+      (🏆 📋 🎉). Caption: “From problem to solution — you did it!”
+      Size: 1200 × 400 px (wide banner).
+    -->
+    <div class="lesson-image-display" role="img" aria-label="Cartoon lion proudly presenting a project poster to the class">
+      <div class="image-placeholder-inner">
+        <div class="image-placeholder-icon">🖼️</div>
+        <div class="image-placeholder-text">
+          <strong>IMAGE PLACEHOLDER — Unit 1, Chapter 10</strong>
+          <p>
+            A bright, flat cartoon in Lion King style. A young lion cub (like Simba) stands proudly
+            in front of a large poster board. The poster shows all four pillars as colorful columns
+            (🧩🔍🎯📋), a decomposition tree, a pattern chart, an abstraction grid, and a numbered
+            algorithm list. A trophy sits on the table beside the poster. Classmates (zebras,
+            meerkats, giraffes) watch and clap. A wise older lion (Rafiki) smiles from the side.
+            Background: savanna-themed classroom with acacia wood desks, floating icons
+            (🏆 📋 🎉). Caption: “From problem to solution — you did it!”
+          </p>
+          <p class="image-placeholder-hint">Recommended size: 1200 × 400 px (wide banner)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== LESSON PLAN OVERVIEW (100 minutes) ===== -->
+    <section class="lesson-section lesson-plan-overview">
+      <h2>📅 Lesson Plan Overview (100 minutes)</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">0–10 min</div>
+          <div class="timeline-content"><strong>Warm-Up:</strong> Project Overview — what you will build.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">10–20 min</div>
+          <div class="timeline-content"><strong>Direct Teaching:</strong> Project options + planning checklist.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">20–45 min</div>
+          <div class="timeline-content"><strong>Planning:</strong> Write problem statement, decomposition, patterns, abstraction, algorithm, test plan.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">45–55 min</div>
+          <div class="timeline-content"><strong>Break:</strong> Stretch, hydrate, brain reset 🦁</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">55–80 min</div>
+          <div class="timeline-content"><strong>Creating:</strong> Build poster, slides, or model with all 4 pillars.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">80–95 min</div>
+          <div class="timeline-content"><strong>Presenting:</strong> 5-minute group presentations.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">95–100 min</div>
+          <div class="timeline-content"><strong>Self-Check &amp; Reflection:</strong> Checklist + written reflection.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LESSON CONTENT ===== -->
+    <div class="lesson-content">
+
+      <!-- Section 10.1 -->
+      <section class="lesson-section">
+        <h2>10.1 Project Overview <span class="time-tag">⏱️ 0–10 min</span></h2>
+        <p>Now it is time to use everything you have learned. You will design a <strong>complete computational thinking solution</strong> for a real-life problem.</p>
+
+        <p><strong>Your project should include:</strong></p>
+        <ul class="cute-list">
+          <li>A clear problem statement.</li>
+          <li>Decomposition with at least 3 levels.</li>
+          <li>Pattern recognition with at least 2 patterns.</li>
+          <li>Abstraction with essential and non-essential details.</li>
+          <li>An algorithm with at least 10 steps.</li>
+          <li>Testing with at least 3 cases (normal, boundary, edge).</li>
+          <li>A clear presentation.</li>
+        </ul>
+
+        <div class="think-box">
+          <strong>🗣️ Think–Pair–Share (2 minutes):</strong>
+          <p>Which pillar are you most confident in? Which one do you want to practice more? Share with your partner.</p>
+        </div>
+      </section>
+
+      <!-- Section 10.2 -->
+      <section class="lesson-section">
+        <h2>10.2 Project Options <span class="time-tag">⏱️ 10–20 min</span></h2>
+        <p><strong>Choose one:</strong></p>
+        <ul class="cute-list">
+          <li>Line up students by height quickly.</li>
+          <li>Arrange a wardrobe for easy finding.</li>
+          <li>Organize a school locker.</li>
+          <li>Plan a morning routine.</li>
+          <li>Design a library book system.</li>
+          <li>Organize a class folder system.</li>
+          <li>Plan a weekly meal schedule.</li>
+          <li>Design a school bag packing system.</li>
+        </ul>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Let students choose a problem that matters to them personally — they'll stay more engaged and produce better work.
+        </div>
+      </section>
+
+      <!-- Section 10.3 -->
+      <section class="lesson-section">
+        <h2>10.3 Planning Your Project <span class="time-tag">⏱️ 20–45 min</span></h2>
+        <p><strong>Write down everything before you create your poster.</strong></p>
+
+        <div class="pillar-application">
+          <div class="pillar-app-item">
+            <h4>📝 Problem Statement</h4>
+            <p>What is the problem you are solving? Why does it matter?</p>
+          </div>
+          <div class="pillar-app-item">
+            <h4>🧩 Decomposition (3 levels)</h4>
+            <p>Level 1 — main sub-problems.</p>
+            <p>Level 2 — break each sub-problem into smaller tasks.</p>
+            <p>Level 3 — break at least one level-2 task further.</p>
+          </div>
+          <div class="pillar-app-item">
+            <h4>🔍 Patterns Identified</h4>
+            <p>What similarities or repeating rules did you find?</p>
+          </div>
+          <div class="pillar-app-item">
+            <h4>🎯 Abstraction</h4>
+            <p><strong>Essential:</strong> what matters for the goal.</p>
+            <p><strong>Non-essential:</strong> what can be ignored.</p>
+          </div>
+          <div class="pillar-app-item">
+            <h4>📋 Algorithm Outline</h4>
+            <p>At least 10 clear, ordered steps.</p>
+          </div>
+          <div class="pillar-app-item">
+            <h4>🧪 Test Plan</h4>
+            <p>Normal case, boundary case, edge case.</p>
+          </div>
+        </div>
+
+        <p><strong>Check with your teacher before you continue.</strong></p>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Circulate and review each group's plan before they start creating. This prevents wasted time and ensures every pillar is covered.
+        </div>
+      </section>
+
+      <!-- ===== BREAK ===== -->
+      <section class="lesson-section break-box">
+        <h2>☕ Break Time <span class="time-tag">⏱️ 45–55 min</span></h2>
+        <p>Stretch, hydrate, and reset your brain. When you return, you'll create your project poster! 🦁</p>
+      </section>
+
+      <!-- Section 10.4 -->
+      <section class="lesson-section activity-box">
+        <h2>10.4 Creating Your Project <span class="time-tag">⏱️ 55–80 min</span></h2>
+        <p><strong>Create your project:</strong></p>
+        <ul class="cute-list">
+          <li>Poster, slides, or model.</li>
+          <li>Include all four pillars.</li>
+          <li>Include the algorithm with at least 10 steps.</li>
+          <li>Include a test with 3 different cases.</li>
+        </ul>
+
+        <p><strong>Prepare a 5-minute presentation.</strong></p>
+
+        <div class="group-roles">
+          <h4>👥 Suggested Group Roles</h4>
+          <ul class="cute-list">
+            <li><strong>Designer:</strong> draws the poster layout and pillars.</li>
+            <li><strong>Writer:</strong> writes the algorithm and test plan.</li>
+            <li><strong>Illustrator:</strong> adds icons, colors, and labels.</li>
+            <li><strong>Presenter:</strong> prepares and delivers the 5-minute talk.</li>
+            <li><strong>Timekeeper:</strong> keeps the group on schedule.</li>
+          </ul>
+        </div>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Remind students that the poster should clearly show the <em>connection</em> between the four pillars — not just four separate sections. Use arrows or a flow diagram.
+        </div>
+      </section>
+
+      <!-- Section 10.5 -->
+      <section class="lesson-section">
+        <h2>10.5 Presenting Your Project <span class="time-tag">⏱️ 80–95 min</span></h2>
+        <p><strong>Your presentation should include:</strong></p>
+        <ol class="cute-list numbered">
+          <li>Problem and why it matters.</li>
+          <li>Decomposition.</li>
+          <li>Pattern recognition.</li>
+          <li>Abstraction.</li>
+          <li>Algorithm.</li>
+          <li>Test results.</li>
+          <li>What you learned.</li>
+        </ol>
+
+        <div class="think-box">
+          <strong>🗣️ Peer Feedback:</strong>
+          <p>After each presentation, give one <em>star</em> (something you liked) and one <em>wish</em> (something that could be improved).</p>
+        </div>
+      </section>
+
+      <!-- Section 10.6 -->
+      <section class="lesson-section">
+        <h2>10.6 Self-Check <span class="time-tag">⏱️ 95–97 min</span></h2>
+        <p>Use this checklist to review your project:</p>
+
+        <div class="key-words-table">
+          <div class="key-word-row header">
+            <div>Criteria</div>
+            <div>Yes / No</div>
+          </div>
+          <div class="key-word-row">
+            <div>I wrote a clear problem statement.</div>
+            <div>☐ Yes ☐ No</div>
+          </div>
+          <div class="key-word-row">
+            <div>I decomposed the problem into 3 levels.</div>
+            <div>☐ Yes ☐ No</div>
+          </div>
+          <div class="key-word-row">
+            <div>I identified at least 2 patterns.</div>
+            <div>☐ Yes ☐ No</div>
+          </div>
+          <div class="key-word-row">
+            <div>I created an abstraction with essential and non-essential details.</div>
+            <div>☐ Yes ☐ No</div>
+          </div>
+          <div class="key-word-row">
+            <div>I wrote an algorithm with at least 10 steps.</div>
+            <div>☐ Yes ☐ No</div>
+          </div>
+          <div class="key-word-row">
+            <div>I tested with 3 different cases.</div>
+            <div>☐ Yes ☐ No</div>
+          </div>
+          <div class="key-word-row">
+            <div>My presentation is clear.</div>
+            <div>☐ Yes ☐ No</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 10.7 -->
+      <section class="lesson-section summary-box">
+        <h2>10.7 Reflection <span class="time-tag">⏱️ 97–100 min</span></h2>
+        <p><strong>After your presentation, write a reflection:</strong></p>
+        <ul class="cute-list">
+          <li>What was the hardest part?</li>
+          <li>Which pillar helped most?</li>
+          <li>How will you use computational thinking in the future?</li>
+        </ul>
+
+        <div class="exit-ticket">
+          <h4>🎟️ Exit Ticket — Complete before you leave</h4>
+          <p>Write one paragraph answering:</p>
+          <p style="text-align:center; font-size:1.1rem; font-weight:900; color:#8b4a00;">
+            “How did computational thinking change the way I solve problems?”
+          </p>
+        </div>
+
+        <p class="reflection-prompt">🦁 <em>“Remember who you are — a computational thinker!”</em></p>
+      </section>
+
+      <!-- Section 10.8 Summary -->
+      <section class="lesson-section summary-box">
+        <h2>10.8 Chapter Summary</h2>
+        <ul class="cute-list">
+          <li>A computational thinking project uses all four pillars.</li>
+          <li>Testing with different cases makes the solution reliable.</li>
+          <li>Presenting helps you explain your thinking to others.</li>
+          <li>Reflection helps you learn from the experience.</li>
+        </ul>
+      </section>
+
+      <!-- Section 10.9 Key Words -->
+      <section class="lesson-section">
+        <h2>10.9 Key Words</h2>
+        <div class="key-words-table">
+          <div class="key-word-row header">
+            <div>Word</div>
+            <div>Meaning</div>
+          </div>
+          <div class="key-word-row">
+            <div>Computational thinking</div>
+            <div>A formal way of solving problems</div>
+          </div>
+          <div class="key-word-row">
+            <div>Decomposition</div>
+            <div>Breaking a problem into smaller parts</div>
+          </div>
+          <div class="key-word-row">
+            <div>Pattern recognition</div>
+            <div>Finding similarities or repeating rules</div>
+          </div>
+          <div class="key-word-row">
+            <div>Abstraction</div>
+            <div>Focusing on important details</div>
+          </div>
+          <div class="key-word-row">
+            <div>Algorithm</div>
+            <div>A clear, ordered set of steps</div>
+          </div>
+          <div class="key-word-row">
+            <div>Project</div>
+            <div>A complete piece of work</div>
+          </div>
+          <div class="key-word-row">
+            <div>Present</div>
+            <div>Show your work to others</div>
+          </div>
+          <div class="key-word-row">
+            <div>Reflect</div>
+            <div>Think about what you learned</div>
+          </div>
+        </div>
+      </section>
+
+    </div> <!-- end lesson-content -->
+
+    <!-- ===== TEACHER ANNOUNCEMENT BOX (grows with content) ===== -->
+    <!--
+      📢 TEACHER ANNOUNCEMENT BOX
+      ─────────────────────────────────────────────────────────
+      This block grows automatically when you add <li> items.
+      Replace the example <li> below with your own announcements.
+    -->
+    <div class="announcement-box" id="teacherAnnouncement">
+      <h3 class="announcement-title">📢 Announcements</h3>
+      <ol class="announcement-list">
+        <li><em>Announcement space — your teacher will add messages here later.</em></li>
+      </ol>
+    </div>
+
+    <!-- ===== NAVIGATION / FOOTER ===== -->
+    <div class="lesson-nav">
+      <a href="unit1-ch9.html" class="nav-button back-to-index">⬅️ Previous: Chapter 9</a>
+      <span class="nav-spacer"></span>
+      <a href="unit1-review.html" class="nav-button next-lesson">Review Unit 1 ➡️</a>
+    </div>
+
+    <div class="footer-note" style="margin-top: 2rem;">
+      <span>🦁</span> Unit 1 · Chapter 10 — Your Project <span>🏆</span>
+    </div>
+
+  </div> <!-- end book-container -->
+
+  <!-- External JavaScript (inside js folder) -->
+  <script src="js/script.js"></script>
+</body>
+</html>

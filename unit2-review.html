@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 2 Review — Logic and Functions in Programming</title>
+  <!-- External CSS (inside css folder) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon / emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>">
+</head>
+<body>
+
+  <div class="book-container lesson-page">
+
+    <!-- ===== HEADER / TITLE ===== -->
+    <header class="lesson-header">
+      <div class="lesson-badge">Unit 2 · Review</div>
+      <h1>Unit 2 Review</h1>
+      <p class="lesson-subhead">🏆 Logic, functions, and programs — look how far you've come!</p>
+
+      <div class="lesson-meta">
+        <span class="meta-pill">⏱️ 60–80 minutes</span>
+        <span class="meta-pill">🎯 Grade 8</span>
+        <span class="meta-pill">🏆 Review &amp; Reflection</span>
+      </div>
+    </header>
+
+    <!-- ===== IMAGE (VISIBLE PLACEHOLDER) ===== -->
+    <!--
+      🖼️ IMAGE INSTRUCTIONS FOR THE TEACHER:
+      Replace the <div class="lesson-image-display"> with:
+      <img src="images/unit2-review-hero.png" alt="Cartoon lion cub standing proudly at the top of a hill with a laptop and a path of milestone stones" class="lesson-image-display">
+
+      Recommended image (illustration):
+      A bright, flat cartoon in Lion King style. A young lion cub (like Simba) stands at the
+      top of a hill, holding a laptop. Below, a winding path is lined with milestone stones,
+      each labeled with a Unit 2 topic: Boolean Logic, Boolean Operators, Functions,
+      Functions with Logic, Algorithm Design, Grade Calculator, Inequalities, Testing,
+      Combining Logic &amp; Functions. A golden trophy sits on the hill beside the cub.
+      A wise older lion (Rafiki) stands nearby, smiling proudly.
+      Background: savanna at sunset, acacia trees, floating icons (🏆 💻 🎉 ✅ 📦).
+      Caption at bottom: “Look how far you've come — you are a programmer now!”
+      Size: 1200 × 400 px (wide banner).
+    -->
+    <div class="lesson-image-display" role="img" aria-label="Cartoon lion cub standing proudly at the top of a hill with a laptop and milestone stones">
+      <div class="image-placeholder-inner">
+        <div class="image-placeholder-icon">🖼️</div>
+        <div class="image-placeholder-text">
+          <strong>IMAGE PLACEHOLDER — Unit 2 Review</strong>
+          <p>
+            A bright, flat cartoon in Lion King style. A young lion cub (like Simba) stands at the
+            top of a hill, holding a laptop. Below, a winding path is lined with milestone stones,
+            each labeled with a Unit 2 topic: Boolean Logic, Boolean Operators, Functions,
+            Functions with Logic, Algorithm Design, Grade Calculator, Inequalities, Testing,
+            Combining Logic &amp; Functions. A golden trophy sits on the hill beside the cub.
+            A wise older lion (Rafiki) stands nearby, smiling proudly.
+            Background: savanna at sunset, acacia trees, floating icons (🏆 💻 🎉 ✅ 📦).
+            Caption: “Look how far you've come — you are a programmer now!”
+          </p>
+          <p class="image-placeholder-hint">Recommended size: 1200 × 400 px (wide banner)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== REVIEW PLAN OVERVIEW ===== -->
+    <section class="lesson-section lesson-plan-overview">
+      <h2>📅 Review Plan Overview (60–80 minutes)</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">0–10 min</div>
+          <div class="timeline-content"><strong>Warm-Up:</strong> What You Learned — quick recall.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">10–30 min</div>
+          <div class="timeline-content"><strong>Vocabulary Review:</strong> Key terms matching game.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">30–50 min</div>
+          <div class="timeline-content"><strong>Concept Check:</strong> Build a mini eligibility program.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">50–60 min</div>
+          <div class="timeline-content"><strong>Break:</strong> Stretch, hydrate 🦁</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">60–75 min</div>
+          <div class="timeline-content"><strong>Final Reflection:</strong> Write your Unit 2 learning journey.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">75–80 min</div>
+          <div class="timeline-content"><strong>Celebration:</strong> Unit 2 complete! 🏆</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LESSON CONTENT ===== -->
+    <div class="lesson-content">
+
+      <!-- Section 1 -->
+      <section class="lesson-section">
+        <h2>📘 What You Learned <span class="time-tag">⏱️ 0–10 min</span></h2>
+        <p>In this unit, you learned:</p>
+        <ul class="cute-list">
+          <li>What Boolean values are.</li>
+          <li>How to use comparison operators.</li>
+          <li>How to use Boolean operators (<code>and</code>, <code>or</code>, <code>not</code>).</li>
+          <li>How to build truth tables.</li>
+          <li>How to write functions.</li>
+          <li>How to write Boolean functions.</li>
+          <li>How to design algorithms with functions.</li>
+          <li>How to build a grade calculator.</li>
+          <li>How to solve multi-variable inequalities.</li>
+          <li>How to test and debug programs.</li>
+          <li>How to combine logic and functions.</li>
+          <li>How to complete a logic and functions project.</li>
+        </ul>
+
+        <div class="think-box">
+          <strong>🗣️ Quick Recall (3 minutes):</strong>
+          <p>Without looking at your notes, name three Boolean operators and one type of test case. Share with your partner.</p>
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="lesson-section">
+        <h2>🔑 Vocabulary Review <span class="time-tag">⏱️ 10–30 min</span></h2>
+        <p>Review the key words from Unit 2:</p>
+
+        <div class="key-words-table">
+          <div class="key-word-row header">
+            <div>Word</div>
+            <div>Meaning</div>
+          </div>
+          <div class="key-word-row">
+            <div>Boolean</div>
+            <div>A value that is either True or False</div>
+          </div>
+          <div class="key-word-row">
+            <div>Comparison operator</div>
+            <div>A symbol used to compare values</div>
+          </div>
+          <div class="key-word-row">
+            <div>Boolean operator</div>
+            <div>A symbol that combines conditions</div>
+          </div>
+          <div class="key-word-row">
+            <div>and</div>
+            <div>True only if both conditions are True</div>
+          </div>
+          <div class="key-word-row">
+            <div>or</div>
+            <div>True if at least one condition is True</div>
+          </div>
+          <div class="key-word-row">
+            <div>not</div>
+            <div>Reverses the value</div>
+          </div>
+          <div class="key-word-row">
+            <div>Truth table</div>
+            <div>A table showing all possible outcomes</div>
+          </div>
+          <div class="key-word-row">
+            <div>Function</div>
+            <div>A named block of code that does one job</div>
+          </div>
+          <div class="key-word-row">
+            <div>Parameter</div>
+            <div>An input to a function</div>
+          </div>
+          <div class="key-word-row">
+            <div>Argument</div>
+            <div>A value passed to a function</div>
+          </div>
+          <div class="key-word-row">
+            <div>Return</div>
+            <div>Send a result back</div>
+          </div>
+          <div class="key-word-row">
+            <div>Boolean function</div>
+            <div>A function that returns True or False</div>
+          </div>
+          <div class="key-word-row">
+            <div>Algorithm</div>
+            <div>A clear, ordered set of steps</div>
+          </div>
+          <div class="key-word-row">
+            <div>Pseudocode</div>
+            <div>A simple way to write an algorithm</div>
+          </div>
+          <div class="key-word-row">
+            <div>Decomposition</div>
+            <div>Breaking a problem into smaller parts</div>
+          </div>
+          <div class="key-word-row">
+            <div>Grade calculator</div>
+            <div>A program that converts scores to grades</div>
+          </div>
+          <div class="key-word-row">
+            <div>Inequality</div>
+            <div>A statement that two values are not equal</div>
+          </div>
+          <div class="key-word-row">
+            <div>Nested loop</div>
+            <div>A loop inside another loop</div>
+          </div>
+          <div class="key-word-row">
+            <div>Brute force</div>
+            <div>Trying every possible value</div>
+          </div>
+          <div class="key-word-row">
+            <div>Test</div>
+            <div>Try the program with different inputs</div>
+          </div>
+          <div class="key-word-row">
+            <div>Debug</div>
+            <div>Find and fix errors</div>
+          </div>
+          <div class="key-word-row">
+            <div>Boundary case</div>
+            <div>An input at the edge</div>
+          </div>
+          <div class="key-word-row">
+            <div>Invalid input</div>
+            <div>An input that should not work</div>
+          </div>
+        </div>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Play a quick "Vocabulary Bingo" — read a definition aloud and have students find the matching term. First to call it out wins a point.
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="lesson-section">
+        <h2>🧠 Concept Check <span class="time-tag">⏱️ 30–50 min</span></h2>
+        <p><strong>Build a mini eligibility program using logic and functions.</strong></p>
+        <p style="text-align:center; font-size:1.15rem; font-weight:800; color:#8b4a00; background:#fff6d5; padding:1rem; border-radius:20px; border:3px dashed #e3b44b;">
+          "Check if a person can rent a car. Rule: age ≥ 21 AND has a driver's license."
+        </p>
+
+        <div class="pillar-application">
+          <div class="pillar-app-item">
+            <h4>📥 Input</h4>
+            <p>age, has_license</p>
+          </div>
+          <div class="pillar-app-item">
+            <h4>📤 Output</h4>
+            <p>"Can rent" or "Cannot rent"</p>
+          </div>
+          <div class="pillar-app-item">
+            <h4>📦 Function</h4>
+            <p><code>can_rent(age, has_license)</code></p>
+          </div>
+          <div class="pillar-app-item">
+            <h4>🧠 Boolean condition</h4>
+            <p><code>age &gt;= 21 and has_license == True</code></p>
+          </div>
+          <div class="pillar-app-item">
+            <h4>📋 Pseudocode</h4>
+            <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:15px; padding:1rem 1.2rem; font-family:'Courier New', monospace; font-size:1rem; color:#4b2e0b; line-height:1.8;">
+              FUNCTION can_rent(age, has_license)<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;RETURN age &gt;= 21 AND has_license<br>
+              END FUNCTION
+            </div>
+          </div>
+          <div class="pillar-app-item">
+            <h4>🧪 Test cases</h4>
+            <ul class="cute-list">
+              <li>Normal: age=25, license=True → True</li>
+              <li>Boundary: age=21, license=True → True</li>
+              <li>Invalid: age=20, license=True → False</li>
+            </ul>
+          </div>
+        </div>
+
+        <p><strong>Now write the actual Python code yourself:</strong></p>
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.9;">
+          def can_rent(age, has_license):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return ______________________<br><br>
+          age = int(input("Age: "))<br>
+          has_license = input("Has license? (yes/no): ") == "yes"<br><br>
+          if can_rent(age, has_license):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;print("Can rent")<br>
+          else:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;print("Cannot rent")
+        </div>
+
+        <div class="think-box">
+          <strong>🗣️ Class Discussion (5 minutes):</strong>
+          <p>Why is <code>age &gt;= 21</code> better than <code>age &gt; 20</code>? What happens if someone is exactly 21 years old?</p>
+        </div>
+      </section>
+
+      <!-- ===== BREAK ===== -->
+      <section class="lesson-section break-box">
+        <h2>☕ Break Time <span class="time-tag">⏱️ 50–60 min</span></h2>
+        <p>Stretch, hydrate, and reset. When you return, you'll reflect on your Unit 2 journey! 🦁</p>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="lesson-section practice-box">
+        <h2>📝 Final Reflection <span class="time-tag">⏱️ 60–75 min</span></h2>
+        <p>Think about everything you learned in this unit. Write a short paragraph answering these questions:</p>
+
+        <div class="exit-ticket">
+          <h4>🎟️ My Unit 2 Reflection</h4>
+          <ul class="cute-list">
+            <li>What was the <strong>most important thing</strong> you learned?</li>
+            <li>What was the <strong>hardest part</strong>?</li>
+            <li>How will you use <strong>logic and functions</strong> in the future?</li>
+          </ul>
+        </div>
+
+        <p class="reflection-prompt">🦁 <em>“Remember who you are — a programmer now!”</em></p>
+      </section>
+
+      <!-- Section 5 -->
+      <section class="lesson-section summary-box">
+        <h2>🎉 Unit 2 Complete! <span class="time-tag">⏱️ 75–80 min</span></h2>
+        <p>You have mastered the two big ideas of Unit 2:</p>
+
+        <div class="pillar-grid">
+          <div class="pillar-card">
+            <span class="pillar-emoji">✅</span>
+            <h3>Logic</h3>
+            <p>Making decisions with True and False.</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-emoji">📦</span>
+            <h3>Functions</h3>
+            <p>Reusable blocks of code that do one job.</p>
+          </div>
+        </div>
+
+        <p style="margin-top:1.2rem;"><strong>Next up — Unit 3: Computer Systems and Communication Technology!</strong> You'll discover what's inside a computer, how software works, how networks connect the world, and how communication technology has changed our lives.</p>
+      </section>
+
+    </div> <!-- end lesson-content -->
+
+    <!-- ===== TEACHER ANNOUNCEMENT BOX (grows with content) ===== -->
+    <div class="announcement-box" id="teacherAnnouncement">
+      <h3 class="announcement-title">📢 Announcements</h3>
+      <ol class="announcement-list">
+        <li><em>Announcement space — your teacher will add messages here later.</em></li>
+      </ol>
+    </div>
+
+    <!-- ===== NAVIGATION / FOOTER ===== -->
+    <div class="lesson-nav">
+      <a href="unit2-ch10.html" class="nav-button back-to-index">⬅️ Previous: Chapter 10</a>
+      <span class="nav-spacer"></span>
+      <a href="index.html" class="nav-button next-lesson">Back to Index ➡️</a>
+    </div>
+
+    <div class="footer-note" style="margin-top: 2rem;">
+      <span>🦁</span> Unit 2 · Review &amp; Reflection <span>🏆</span>
+    </div>
+
+  </div> <!-- end book-container -->
+
+  <!-- External JavaScript (inside js folder) -->
+  <script src="js/script.js"></script>
+</body>
+</html>

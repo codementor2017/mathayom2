@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 2 · Chapter 4: Functions with Logic</title>
+  <!-- External CSS (inside css folder) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon / emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>">
+</head>
+<body>
+
+  <div class="book-container lesson-page">
+
+    <!-- ===== HEADER / TITLE ===== -->
+    <header class="lesson-header">
+      <div class="lesson-badge">Unit 2 · Chapter 4</div>
+      <h1>Functions with Logic</h1>
+      <p class="lesson-subhead">🧠 Functions that decide — True, False, or something else!</p>
+
+      <div class="lesson-meta">
+        <span class="meta-pill">⏱️ 100 minutes</span>
+        <span class="meta-pill">🎯 Grade 8</span>
+        <span class="meta-pill">🧠 Boolean Functions</span>
+      </div>
+    </header>
+
+    <!-- ===== IMAGE (VISIBLE PLACEHOLDER) ===== -->
+    <!--
+      🖼️ IMAGE INSTRUCTIONS FOR THE TEACHER:
+      Replace the <div class="lesson-image-display"> with:
+      <img src="images/unit2-ch4-hero.png" alt="Cartoon lion sorting cards into True and False piles with a magic function box" class="lesson-image-display">
+
+      Recommended image (illustration):
+      A bright, flat cartoon in Lion King style. A young lion cub (like Simba) stands in front
+      of two big piles of cards. The left pile is labeled "TRUE ✅" and the right pile is
+      labeled "FALSE ❌". In the middle sits a glowing magical box labeled "is_adult(age)"
+      with an input slot and two output chutes. Cards with ages (15, 20, 10, 18) enter the
+      box, and cards with True/False exit the correct chute. A wise older lion (Rafiki)
+      holds a chalkboard that reads: "def is_adult(age): return age >= 18".
+      Floating icons: ✅ ❌ 🧠. Background: savanna workshop with acacia trees.
+      Caption at bottom: “Functions that decide — True or False!”
+      Size: 1200 × 400 px (wide banner).
+    -->
+    <div class="lesson-image-display" role="img" aria-label="Cartoon lion sorting cards into True and False piles with a magic function box">
+      <div class="image-placeholder-inner">
+        <div class="image-placeholder-icon">🖼️</div>
+        <div class="image-placeholder-text">
+          <strong>IMAGE PLACEHOLDER — Unit 2, Chapter 4</strong>
+          <p>
+            A bright, flat cartoon in Lion King style. A young lion cub (like Simba) stands in front
+            of two big piles of cards. The left pile is labeled "TRUE ✅" and the right pile is
+            labeled "FALSE ❌". In the middle sits a glowing magical box labeled "is_adult(age)"
+            with an input slot and two output chutes. Cards with ages (15, 20, 10, 18) enter the
+            box, and cards with True/False exit the correct chute. A wise older lion (Rafiki)
+            holds a chalkboard that reads: "def is_adult(age): return age &gt;= 18".
+            Floating icons: ✅ ❌ 🧠. Background: savanna workshop with acacia trees.
+            Caption: “Functions that decide — True or False!”
+          </p>
+          <p class="image-placeholder-hint">Recommended size: 1200 × 400 px (wide banner)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== LESSON PLAN OVERVIEW ===== -->
+    <section class="lesson-section lesson-plan-overview">
+      <h2>📅 Lesson Plan Overview (100 minutes)</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">0–10 min</div>
+          <div class="timeline-content"><strong>Warm-Up:</strong> Can a function decide? True/False brainstorm.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">10–30 min</div>
+          <div class="timeline-content"><strong>Direct Teaching:</strong> Boolean functions + if/else in functions.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">30–50 min</div>
+          <div class="timeline-content"><strong>Guided Practice:</strong> is_leap_year, is_valid_triangle, is_strong_password.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">50–60 min</div>
+          <div class="timeline-content"><strong>Break:</strong> Stretch, hydrate, brain reset 🦁</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">60–85 min</div>
+          <div class="timeline-content"><strong>Group Activity:</strong> Logic Function Library.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">85–95 min</div>
+          <div class="timeline-content"><strong>Swap &amp; Test:</strong> Groups exchange and test each other's functions.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">95–100 min</div>
+          <div class="timeline-content"><strong>Exit Ticket:</strong> One-sentence summary + practice.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LESSON CONTENT ===== -->
+    <div class="lesson-content">
+
+      <!-- Section 4.1 -->
+      <section class="lesson-section">
+        <h2>4.1 Functions That Decide <span class="time-tag">⏱️ 0–10 min</span></h2>
+        <p>Can a function return <strong>True</strong> or <strong>False</strong>?</p>
+        <p><strong>Yes.</strong> A <strong>Boolean function</strong> returns True or False.</p>
+
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.9;">
+          def is_adult(age):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return age &gt;= 18<br><br>
+          print(is_adult(15))   # False<br>
+          print(is_adult(20))   # True
+        </div>
+
+        <div class="think-box">
+          <strong>🗣️ Think–Pair–Share (2 minutes):</strong>
+          <p>What other "yes/no" questions could a function answer? (e.g., "Is this number even?", "Is this password strong?")</p>
+        </div>
+      </section>
+
+      <!-- Section 4.2 -->
+      <section class="lesson-section">
+        <h2>4.2 Boolean Functions <span class="time-tag">⏱️ 10–20 min</span></h2>
+        <p>Here are more examples:</p>
+
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.9;">
+          def is_even(n):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return n % 2 == 0<br><br>
+          def is_positive(n):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return n &gt; 0<br><br>
+          def is_between(n, low, high):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return n &gt;= low and n &lt;= high
+        </div>
+
+        <p style="margin-top:1rem;">These functions use <strong>Boolean logic</strong> to decide.</p>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Ask students: "What is the difference between <code>is_even</code> and <code>add</code>?" (One returns True/False; the other returns a number.) Boolean functions are called <em>predicates</em> in programming.
+        </div>
+      </section>
+
+      <!-- Section 4.3 -->
+      <section class="lesson-section">
+        <h2>4.3 Functions with if/else <span class="time-tag">⏱️ 20–30 min</span></h2>
+        <p>Functions can also contain <code>if/else</code> to return different results.</p>
+
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.9;">
+          def grade(score):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;if score &gt;= 80:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "A"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;elif score &gt;= 70:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "B"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;elif score &gt;= 60:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "C"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;elif score &gt;= 50:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "D"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "F"
+        </div>
+
+        <p style="margin-top:1rem;">Functions can contain logic and return different results.</p>
+
+        <div class="think-box">
+          <strong>🗣️ Quick Check (2 minutes):</strong>
+          <p>What would <code>grade(75)</code> return? What about <code>grade(50)</code>?</p>
+        </div>
+      </section>
+
+      <!-- Section 4.4 -->
+      <section class="lesson-section">
+        <h2>4.4 Combining Logic and Functions <span class="time-tag">⏱️ 30–50 min</span></h2>
+        <p>Here are more examples:</p>
+
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.9;">
+          def is_leap_year(year):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)<br><br>
+          def is_valid_triangle(a, b, c):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return a + b &gt; c and b + c &gt; a and a + c &gt; b<br><br>
+          def is_strong_password(password):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return len(password) &gt;= 8 and any(c.isdigit() for c in password)
+        </div>
+
+        <p style="margin-top:1rem;">Boolean logic makes these functions powerful.</p>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Walk through <code>is_leap_year</code> step by step. Ask: "Why do we need BOTH the century check and the 400 check?" Show examples: 2000 (True), 1900 (False), 2024 (True), 2023 (False).
+        </div>
+      </section>
+
+      <!-- ===== BREAK ===== -->
+      <section class="lesson-section break-box">
+        <h2>☕ Break Time <span class="time-tag">⏱️ 50–60 min</span></h2>
+        <p>Stretch, hydrate, and reset your brain. When you return, you'll build your own logic function library! 🦁</p>
+      </section>
+
+      <!-- Section 4.5 Activity -->
+      <section class="lesson-section activity-box">
+        <h2>4.5 Group Activity: Logic Function Library <span class="time-tag">⏱️ 60–85 min</span></h2>
+        <p><strong>Work with a partner.</strong> Write at least 5 Boolean or logic-based functions:</p>
+
+        <ul class="cute-list">
+          <li><code>is_prime(n)</code> — checks if a number is prime.</li>
+          <li><code>is_passing(score)</code> — score ≥ 50.</li>
+          <li><code>can_vote(age, citizen)</code> — age ≥ 18 and citizen.</li>
+          <li><code>is_weekend(day)</code> — day is "Saturday" or "Sunday".</li>
+          <li><code>discount_eligible(age, member)</code> — age &lt; 12 or age &gt; 65 or member.</li>
+        </ul>
+
+        <p><strong>Test each function with at least 3 inputs.</strong></p>
+
+        <div class="group-roles">
+          <h4>👥 Suggested Group Roles</h4>
+          <ul class="cute-list">
+            <li><strong>Writer A:</strong> writes <code>is_prime</code> and <code>is_passing</code>.</li>
+            <li><strong>Writer B:</strong> writes <code>can_vote</code>, <code>is_weekend</code>, <code>discount_eligible</code>.</li>
+            <li><strong>Tester:</strong> runs each function with 3+ inputs.</li>
+            <li><strong>Presenter:</strong> explains the library to the class.</li>
+          </ul>
+        </div>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> For <code>is_prime</code>, students may need a hint: "A prime number is only divisible by 1 and itself." Suggest checking divisibility from 2 to n-1, or use <code>range(2, n)</code>.
+        </div>
+      </section>
+
+      <!-- Section 4.5b Swap & Test -->
+      <section class="lesson-section">
+        <h2>4.5b Swap &amp; Test <span class="time-tag">⏱️ 85–95 min</span></h2>
+        <p>Exchange your logic function library with another group.</p>
+        <p><strong>Test their functions with your own inputs.</strong></p>
+        <p><strong>As you test, ask yourself:</strong></p>
+        <ul class="cute-list">
+          <li>Do their functions return the correct True/False value?</li>
+          <li>Did they handle edge cases (e.g., <code>is_prime(1)</code>, <code>is_prime(2)</code>)?</li>
+          <li>Are their function names clear?</li>
+          <li>Did they use Boolean operators correctly?</li>
+        </ul>
+
+        <div class="think-box">
+          <strong>🗣️ Peer Feedback:</strong>
+          <p>Give the other group one <em>star</em> (something you liked) and one <em>wish</em> (something that could be improved).</p>
+        </div>
+      </section>
+
+      <!-- Section 4.6 Summary -->
+      <section class="lesson-section summary-box">
+        <h2>4.6 Chapter Summary <span class="time-tag">⏱️ 95–97 min</span></h2>
+        <ul class="cute-list">
+          <li>Boolean functions return True or False.</li>
+          <li>Functions can contain if/else to return different results.</li>
+          <li>Boolean logic makes functions powerful.</li>
+          <li>Functions can combine multiple conditions.</li>
+        </ul>
+      </section>
+
+      <!-- Section 4.7 Key Words -->
+      <section class="lesson-section">
+        <h2>4.7 Key Words</h2>
+        <div class="key-words-table">
+          <div class="key-word-row header">
+            <div>Word</div>
+            <div>Meaning</div>
+          </div>
+          <div class="key-word-row">
+            <div>Boolean function</div>
+            <div>A function that returns True or False</div>
+          </div>
+          <div class="key-word-row">
+            <div>Return value</div>
+            <div>The result a function sends back</div>
+          </div>
+          <div class="key-word-row">
+            <div>Condition</div>
+            <div>A statement that can be True or False</div>
+          </div>
+          <div class="key-word-row">
+            <div>Logic</div>
+            <div>Reasoning based on rules</div>
+          </div>
+          <div class="key-word-row">
+            <div>Predicate</div>
+            <div>A function that returns True or False</div>
+          </div>
+          <div class="key-word-row">
+            <div>Decision</div>
+            <div>A choice made based on conditions</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4.8 Practice + Exit Ticket -->
+      <section class="lesson-section practice-box">
+        <h2>4.8 Practice &amp; Exit Ticket <span class="time-tag">⏱️ 97–100 min</span></h2>
+        <p><strong>Homework:</strong> Write a Boolean function <code>is_teenager(age)</code> that returns True if age is between 13 and 19.</p>
+
+        <div class="exit-ticket">
+          <h4>🎟️ Exit Ticket — Complete before you leave</h4>
+          <p>In one sentence, explain what a Boolean function is.</p>
+          <p>Then write the result of each function call:</p>
+          <ul class="cute-list">
+            <li><code>is_even(4)</code> → ______________________</li>
+            <li><code>is_even(7)</code> → ______________________</li>
+            <li><code>is_positive(-3)</code> → ______________________</li>
+            <li><code>is_between(5, 1, 10)</code> → ______________________</li>
+          </ul>
+        </div>
+
+        <p class="reflection-prompt">🦁 <em>“A function that decides is a function that thinks.”</em></p>
+      </section>
+
+    </div> <!-- end lesson-content -->
+
+    <!-- ===== TEACHER ANNOUNCEMENT BOX (grows with content) ===== -->
+    <div class="announcement-box" id="teacherAnnouncement">
+      <h3 class="announcement-title">📢 Announcements</h3>
+      <ol class="announcement-list">
+        <li><em>Announcement space — your teacher will add messages here later.</em></li>
+      </ol>
+    </div>
+
+    <!-- ===== NAVIGATION / FOOTER ===== -->
+    <div class="lesson-nav">
+      <a href="unit2-ch3.html" class="nav-button back-to-index">⬅️ Previous: Chapter 3</a>
+      <span class="nav-spacer"></span>
+      <a href="unit2-ch5.html" class="nav-button next-lesson">Next: Chapter 5 ➡️</a>
+    </div>
+
+    <div class="footer-note" style="margin-top: 2rem;">
+      <span>🦁</span> Unit 2 · Chapter 4 — Functions with Logic <span>🧠</span>
+    </div>
+
+  </div> <!-- end book-container -->
+
+  <!-- External JavaScript (inside js folder) -->
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 2 · Chapter 9: Combining Logic and Functions</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>">
+</head>
+<body>
+  <div class="book-container lesson-page">
+
+    <header class="lesson-header">
+      <div class="lesson-badge">Unit 2 · Chapter 9</div>
+      <h1>Combining Logic and Functions</h1>
+      <p class="lesson-subhead">🧠📦 Two powers together — build a complete program!</p>
+      <div class="lesson-meta">
+        <span class="meta-pill">⏱️ 100 minutes</span>
+        <span class="meta-pill">🎯 Grade 8</span>
+        <span class="meta-pill">🧠 Logic + Functions</span>
+      </div>
+    </header>
+
+    <div class="lesson-image-display" role="img" aria-label="Cartoon lion combining logic and function puzzle pieces">
+      <div class="image-placeholder-inner">
+        <div class="image-placeholder-icon">🖼️</div>
+        <div class="image-placeholder-text">
+          <strong>IMAGE PLACEHOLDER — Unit 2, Chapter 9</strong>
+          <p>
+            A bright, flat cartoon in Lion King style. A young lion cub (like Simba) holds two
+            giant puzzle pieces. The left piece is labeled "LOGIC 🧠" (with True/False icons),
+            and the right piece is labeled "FUNCTIONS 📦" (with def/return icons). The two pieces
+            click together to form a glowing program box that outputs "Eligible!" A wise older
+            lion (Rafiki) smiles and holds a chalkboard with:
+            "def is_eligible(gpa, score, attendance): ..."
+            Floating icons: 🧠 📦 ✅. Background: savanna classroom with acacia-wood desks.
+            Caption at bottom: “Two powers combined — you've got a real program!”
+          </p>
+          <p class="image-placeholder-hint">Recommended size: 1200 × 400 px (wide banner)</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="lesson-section lesson-plan-overview">
+      <h2>📅 Lesson Plan Overview (100 minutes)</h2>
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-time">0–10 min</div><div class="timeline-content"><strong>Warm-Up:</strong> Recall — what have we learned in Unit 2?</div></div>
+        <div class="timeline-item"><div class="timeline-time">10–30 min</div><div class="timeline-content"><strong>Direct Teaching:</strong> Design a complete program (Science Competition).</div></div>
+        <div class="timeline-item"><div class="timeline-time">30–50 min</div><div class="timeline-content"><strong>Guided Practice:</strong> Building the program step-by-step.</div></div>
+        <div class="timeline-item"><div class="timeline-time">50–60 min</div><div class="timeline-content"><strong>Break:</strong> Stretch, hydrate, brain reset 🦁</div></div>
+        <div class="timeline-item"><div class="timeline-time">60–85 min</div><div class="timeline-content"><strong>Group Activity:</strong> Design Your Own Complete Program.</div></div>
+        <div class="timeline-item"><div class="timeline-time">85–95 min</div><div class="timeline-content"><strong>Sharing:</strong> Groups present and demo.</div></div>
+        <div class="timeline-item"><div class="timeline-time">95–100 min</div><div class="timeline-content"><strong>Exit Ticket:</strong> One-sentence summary + practice.</div></div>
+      </div>
+    </section>
+
+    <div class="lesson-content">
+
+      <section class="lesson-section">
+        <h2>9.1 Putting It All Together <span class="time-tag">⏱️ 0–10 min</span></h2>
+        <p><strong>What have you learned in this unit?</strong></p>
+        <ul class="cute-list">
+          <li>Boolean values</li>
+          <li>Boolean operators</li>
+          <li>Functions</li>
+          <li>Boolean functions</li>
+          <li>Algorithm design</li>
+          <li>Grade calculator</li>
+          <li>Inequality solver</li>
+        </ul>
+        <p>Today we combine everything into one complete program.</p>
+        <div class="think-box">
+          <strong>🗣️ Think–Pair–Share (2 minutes):</strong>
+          <p>Which skill from Unit 2 do you feel most confident about? Which one would you like to practice more?</p>
+        </div>
+      </section>
+
+      <section class="lesson-section">
+        <h2>9.2 Design a Complete Program <span class="time-tag">⏱️ 10–30 min</span></h2>
+        <p><strong>Problem:</strong> A school wants a program to check if a student can join the science competition.</p>
+        <p><strong>Rule:</strong> GPA ≥ 3.0 AND science score ≥ 80 AND attendance ≥ 90%.</p>
+        <ul class="cute-list">
+          <li>If eligible: Print "Eligible" and the student's rank (Gold, Silver, Bronze based on score).</li>
+          <li>If not: Print "Not eligible" and the reason.</li>
+        </ul>
+        <p><strong>Functions:</strong></p>
+        <ul class="cute-list">
+          <li><code>is_eligible(gpa, score, attendance)</code></li>
+          <li><code>rank(score)</code></li>
+          <li><code>reason(gpa, score, attendance)</code></li>
+        </ul>
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Show students how the three functions work together: <code>is_eligible</code> decides, <code>rank</code> classifies, and <code>reason</code> explains a failure.
+        </div>
+      </section>
+
+      <section class="lesson-section">
+        <h2>9.3 Building the Program <span class="time-tag">⏱️ 30–50 min</span></h2>
+        <p><strong>Here is the code:</strong></p>
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.9;">
+          def is_eligible(gpa, score, attendance):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return gpa &gt;= 3.0 and score &gt;= 80 and attendance &gt;= 90<br><br>
+          def rank(score):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;if score &gt;= 95:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Gold"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;elif score &gt;= 90:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Silver"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Bronze"<br><br>
+          def reason(gpa, score, attendance):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;if gpa &lt; 3.0:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "GPA too low"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;if score &lt; 80:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Science score too low"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;if attendance &lt; 90:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Attendance too low"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return "Eligible"
+        </div>
+        <p style="margin-top:1rem;"><strong>Main program:</strong></p>
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.9;">
+          gpa = float(input("GPA: "))<br>
+          score = float(input("Science score: "))<br>
+          attendance = float(input("Attendance (%): "))<br><br>
+          if is_eligible(gpa, score, attendance):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;print("Eligible - Rank:", rank(score))<br>
+          else:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;print("Not eligible - Reason:", reason(gpa, score, attendance))
+        </div>
+        <div class="think-box">
+          <strong>🗣️ Quick Check (2 minutes):</strong>
+          <p>Why does <code>reason</code> use separate <code>if</code> statements instead of <code>elif</code>? What happens if a student fails two conditions?</p>
+        </div>
+      </section>
+
+      <section class="lesson-section break-box">
+        <h2>☕ Break Time <span class="time-tag">⏱️ 50–60 min</span></h2>
+        <p>Stretch, hydrate, and reset your brain. When you return, you'll design your own complete program! 🦁</p>
+      </section>
+
+      <section class="lesson-section activity-box">
+        <h2>9.4 Group Activity: Design Your Own Complete Program <span class="time-tag">⏱️ 60–85 min</span></h2>
+        <p><strong>Work with a partner.</strong> Choose one problem:</p>
+        <ul class="cute-list">
+          <li>Check if a person can get a loan (income, credit score, age).</li>
+          <li>Check if a student qualifies for a scholarship (GPA, activities, income).</li>
+          <li>Check if a customer gets free shipping (total, member, location).</li>
+          <li>Check if a triangle is valid and classify it (equilateral, isosceles, scalene).</li>
+        </ul>
+        <p><strong>Design functions. Write logic. Write code. Test with 3 cases.</strong></p>
+        <div class="group-roles">
+          <h4>👥 Suggested Group Roles</h4>
+          <ul class="cute-list">
+            <li><strong>Designer:</strong> decides the functions and conditions.</li>
+            <li><strong>Writer:</strong> types the code.</li>
+            <li><strong>Tester:</strong> runs normal, boundary, and invalid cases.</li>
+            <li><strong>Presenter:</strong> explains the program to the class.</li>
+          </ul>
+        </div>
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Encourage students to reuse patterns from earlier chapters. Most programs will have an <code>is_...()</code> check, a <code>reason()</code> or <code>rank()</code>, and a main <code>if</code> block.
+        </div>
+      </section>
+
+      <section class="lesson-section">
+        <h2>9.4b Sharing &amp; Presentations <span class="time-tag">⏱️ 85–95 min</span></h2>
+        <p>Each pair will demo their program and explain their logic.</p>
+        <p><strong>As you listen, ask yourself:</strong></p>
+        <ul class="cute-list">
+          <li>Did they use at least 3 functions?</li>
+          <li>Did they use Boolean logic correctly?</li>
+          <li>Did they test with all 3 case types?</li>
+          <li>Is the program clear and useful?</li>
+        </ul>
+        <div class="think-box">
+          <strong>🗣️ Peer Feedback:</strong>
+          <p>Give one <em>star</em> and one <em>wish</em>.</p>
+        </div>
+      </section>
+
+      <section class="lesson-section summary-box">
+        <h2>9.5 Chapter Summary <span class="time-tag">⏱️ 95–97 min</span></h2>
+        <ul class="cute-list">
+          <li>A complete program uses functions and logic together.</li>
+          <li>Functions make the program easier to design and test.</li>
+          <li>Boolean logic helps make decisions.</li>
+          <li>Testing with different cases makes the program reliable.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-section">
+        <h2>9.6 Key Words</h2>
+        <div class="key-words-table">
+          <div class="key-word-row header"><div>Word</div><div>Meaning</div></div>
+          <div class="key-word-row"><div>Integrate</div><div>Combine into one</div></div>
+          <div class="key-word-row"><div>Complete program</div><div>A program that solves a full problem</div></div>
+          <div class="key-word-row"><div>Design</div><div>Planning how to build something</div></div>
+          <div class="key-word-row"><div>Logic</div><div>Reasoning based on rules</div></div>
+          <div class="key-word-row"><div>Function</div><div>A named block of code that does one job</div></div>
+          <div class="key-word-row"><div>Test</div><div>Try the program with different inputs</div></div>
+          <div class="key-word-row"><div>Present</div><div>Show your work to others</div></div>
+        </div>
+      </section>
+
+      <section class="lesson-section practice-box">
+        <h2>9.7 Practice &amp; Exit Ticket <span class="time-tag">⏱️ 97–100 min</span></h2>
+        <p><strong>Homework:</strong> List the functions you would write for a program that checks if a number is prime.</p>
+        <div class="exit-ticket">
+          <h4>🎟️ Exit Ticket — Complete before you leave</h4>
+          <p>In one sentence, explain how logic and functions work together.</p>
+          <p>Then name two functions you would use in an eligibility program:</p>
+          <ol class="cute-list numbered">
+            <li>______________________</li>
+            <li>______________________</li>
+          </ol>
+        </div>
+        <p class="reflection-prompt">🦁 <em>“Logic decides. Functions organize. Together they solve.”</em></p>
+      </section>
+
+    </div>
+
+    <div class="announcement-box" id="teacherAnnouncement">
+      <h3 class="announcement-title">📢 Announcements</h3>
+      <ol class="announcement-list">
+        <li><em>Announcement space — your teacher will add messages here later.</em></li>
+      </ol>
+    </div>
+
+    <div class="lesson-nav">
+      <a href="unit2-ch8.html" class="nav-button back-to-index">⬅️ Previous: Chapter 8</a>
+      <span class="nav-spacer"></span>
+      <a href="unit2-ch10.html" class="nav-button next-lesson">Next: Chapter 10 ➡️</a>
+    </div>
+
+    <div class="footer-note" style="margin-top: 2rem;">
+      <span>🦁</span> Unit 2 · Chapter 9 — Combining Logic and Functions <span>🧠</span>
+    </div>
+
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

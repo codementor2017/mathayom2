@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 2 · Chapter 6: The Grade Calculator Program</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>">
+</head>
+<body>
+  <div class="book-container lesson-page">
+
+    <header class="lesson-header">
+      <div class="lesson-badge">Unit 2 · Chapter 6</div>
+      <h1>The Grade Calculator Program</h1>
+      <p class="lesson-subhead">📊 From score to letter grade — functions make it easy!</p>
+      <div class="lesson-meta">
+        <span class="meta-pill">⏱️ 100 minutes</span>
+        <span class="meta-pill">🎯 Grade 8</span>
+        <span class="meta-pill">📊 Grade Calculator</span>
+      </div>
+    </header>
+
+    <!-- IMAGE PLACEHOLDER -->
+    <div class="lesson-image-display" role="img" aria-label="Cartoon lion at a chalkboard showing the grading scale">
+      <div class="image-placeholder-inner">
+        <div class="image-placeholder-icon">🖼️</div>
+        <div class="image-placeholder-text">
+          <strong>IMAGE PLACEHOLDER — Unit 2, Chapter 6</strong>
+          <p>
+            A bright, flat cartoon in Lion King style. A young lion cub (like Simba) stands at a
+            chalkboard, holding a chalk. On the board is a colorful grading scale:
+            80–100 = A, 70–79 = B, 60–69 = C, 50–59 = D, 0–49 = F. A wise older lion (Rafiki)
+            holds a small sign with the Python code:
+            "def grade(score): if score &gt;= 80: return 'A' ..."
+            Floating icons: 📊 ✅ 📝. Background: savanna classroom with acacia-wood desks.
+            Caption at bottom: “From score to grade — simple and clear!”
+          </p>
+          <p class="image-placeholder-hint">Recommended size: 1200 × 400 px (wide banner)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LESSON PLAN OVERVIEW -->
+    <section class="lesson-section lesson-plan-overview">
+      <h2>📅 Lesson Plan Overview (100 minutes)</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">0–10 min</div>
+          <div class="timeline-content"><strong>Warm-Up:</strong> How does your school decide your grade?</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">10–30 min</div>
+          <div class="timeline-content"><strong>Direct Teaching:</strong> Building the grade function step-by-step.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">30–50 min</div>
+          <div class="timeline-content"><strong>Guided Practice:</strong> Adding input validation + multiple scores.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">50–60 min</div>
+          <div class="timeline-content"><strong>Break:</strong> Stretch, hydrate, brain reset 🦁</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">60–85 min</div>
+          <div class="timeline-content"><strong>Group Activity:</strong> Extend the grade calculator (GPA, pass counter, loops).</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">85–95 min</div>
+          <div class="timeline-content"><strong>Sharing:</strong> Groups present their improved calculators.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">95–100 min</div>
+          <div class="timeline-content"><strong>Exit Ticket:</strong> One-sentence summary + practice.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="lesson-content">
+
+      <!-- Section 6.1 -->
+      <section class="lesson-section">
+        <h2>6.1 What is a Grade Calculator? <span class="time-tag">⏱️ 0–10 min</span></h2>
+        <p>How does your school decide your letter grade?</p>
+        <p>Most schools use a scale like this:</p>
+        <ul class="cute-list">
+          <li>80–100: A</li>
+          <li>70–79: B</li>
+          <li>60–69: C</li>
+          <li>50–59: D</li>
+          <li>0–49: F</li>
+        </ul>
+        <p>Today we will build a grade calculator that uses <strong>functions</strong> and <strong>logic</strong>.</p>
+        <div class="think-box">
+          <strong>🗣️ Think–Pair–Share (2 minutes):</strong>
+          <p>What do you think are the "boundary scores" where the grade changes? Why are they important?</p>
+        </div>
+      </section>
+
+      <!-- Section 6.2 -->
+      <section class="lesson-section">
+        <h2>6.2 Building the Program <span class="time-tag">⏱️ 10–30 min</span></h2>
+        <p>First, define the grading scale. Then write the function:</p>
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.9;">
+          def grade(score):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;if score &gt;= 80:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "A"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;elif score &gt;= 70:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "B"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;elif score &gt;= 60:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "C"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;elif score &gt;= 50:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "D"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "F"
+        </div>
+        <p style="margin-top:1rem;"><strong>Add input validation:</strong></p>
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.9;">
+          def grade(score):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;if score &lt; 0 or score &gt; 100:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Invalid score"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;elif score &gt;= 80:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "A"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;...
+        </div>
+        <p style="margin-top:1rem;"><strong>Main program:</strong></p>
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.9;">
+          score = float(input("Enter score: "))<br>
+          print("Grade:", grade(score))
+        </div>
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Highlight why <code>elif</code> is used instead of separate <code>if</code> statements. It ensures the first matching condition wins.
+        </div>
+      </section>
+
+      <!-- Section 6.3 -->
+      <section class="lesson-section">
+        <h2>6.3 Adding Multiple Scores <span class="time-tag">⏱️ 30–50 min</span></h2>
+        <p>Let's extend the program to handle multiple scores.</p>
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.9;">
+          def grade(score):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;...<br><br>
+          def average(scores):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return sum(scores) / len(scores)<br><br>
+          scores = []<br>
+          for i in range(5):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;s = float(input("Enter score: "))<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;scores.append(s)<br><br>
+          avg = average(scores)<br>
+          print("Average:", avg)<br>
+          print("Final grade:", grade(avg))
+        </div>
+        <p style="margin-top:1rem;">What if the score is exactly 80? Exactly 50? These are <strong>boundary cases</strong>.</p>
+        <div class="think-box">
+          <strong>🗣️ Quick Check (2 minutes):</strong>
+          <p>Why do we need to test with boundary scores like 80, 70, 60, and 50?</p>
+        </div>
+      </section>
+
+      <!-- BREAK -->
+      <section class="lesson-section break-box">
+        <h2>☕ Break Time <span class="time-tag">⏱️ 50–60 min</span></h2>
+        <p>Stretch, hydrate, and reset your brain. When you return, you'll improve the grade calculator! 🦁</p>
+      </section>
+
+      <!-- Section 6.4 Activity -->
+      <section class="lesson-section activity-box">
+        <h2>6.4 Group Activity: Improve the Grade Calculator <span class="time-tag">⏱️ 60–85 min</span></h2>
+        <p><strong>Work with a partner.</strong> Improve the program by adding at least <strong>two</strong> of the following:</p>
+        <ul class="cute-list">
+          <li>A function to count how many students passed.</li>
+          <li>A loop to input scores until the user types "done".</li>
+          <li>A function that returns both the grade and a comment.</li>
+          <li>A function that calculates the GPA (A=4, B=3, C=2, D=1, F=0).</li>
+        </ul>
+        <p><strong>Test your program with at least 3 different score sets.</strong></p>
+        <div class="group-roles">
+          <h4>👥 Suggested Group Roles</h4>
+          <ul class="cute-list">
+            <li><strong>Writer:</strong> types the code.</li>
+            <li><strong>Tester:</strong> runs the program with different scores.</li>
+            <li><strong>Debugger:</strong> fixes errors and boundary issues.</li>
+            <li><strong>Presenter:</strong> explains the improvements to the class.</li>
+          </ul>
+        </div>
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Challenge advanced groups to add an "A+" for scores ≥ 95 and an "F" for scores below 50. Ask: "Where should the new boundary go?"
+        </div>
+      </section>
+
+      <!-- Section 6.4b Sharing -->
+      <section class="lesson-section">
+        <h2>6.4b Sharing &amp; Presentations <span class="time-tag">⏱️ 85–95 min</span></h2>
+        <p>Each pair will present their improved calculator.</p>
+        <p><strong>As you listen, ask yourself:</strong></p>
+        <ul class="cute-list">
+          <li>Did they add at least two improvements?</li>
+          <li>Did they test with boundary cases?</li>
+          <li>Is the program clear and easy to use?</li>
+        </ul>
+        <div class="think-box">
+          <strong>🗣️ Peer Feedback:</strong>
+          <p>Give one <em>star</em> (something you liked) and one <em>wish</em> (something that could be improved).</p>
+        </div>
+      </section>
+
+      <!-- Section 6.5 Summary -->
+      <section class="lesson-section summary-box">
+        <h2>6.5 Chapter Summary <span class="time-tag">⏱️ 95–97 min</span></h2>
+        <ul class="cute-list">
+          <li>A grade calculator uses functions and logic.</li>
+          <li>Boundary cases are important to test.</li>
+          <li>Functions can be reused for different inputs.</li>
+          <li>Input validation makes programs more reliable.</li>
+        </ul>
+      </section>
+
+      <!-- Section 6.6 Key Words -->
+      <section class="lesson-section">
+        <h2>6.6 Key Words</h2>
+        <div class="key-words-table">
+          <div class="key-word-row header"><div>Word</div><div>Meaning</div></div>
+          <div class="key-word-row"><div>Grade calculator</div><div>A program that converts scores to grades</div></div>
+          <div class="key-word-row"><div>Score</div><div>A number representing performance</div></div>
+          <div class="key-word-row"><div>Letter grade</div><div>A letter representing performance</div></div>
+          <div class="key-word-row"><div>Function</div><div>A named block of code that does one job</div></div>
+          <div class="key-word-row"><div>Logic</div><div>Reasoning based on rules</div></div>
+          <div class="key-word-row"><div>Test case</div><div>An input used to test a program</div></div>
+          <div class="key-word-row"><div>Boundary</div><div>An edge value</div></div>
+        </div>
+      </section>
+
+      <!-- Section 6.7 Practice -->
+      <section class="lesson-section practice-box">
+        <h2>6.7 Practice &amp; Exit Ticket <span class="time-tag">⏱️ 97–100 min</span></h2>
+        <p><strong>Homework:</strong> What are the boundary scores in the grade calculator? Why do they matter?</p>
+        <div class="exit-ticket">
+          <h4>🎟️ Exit Ticket — Complete before you leave</h4>
+          <p>In one sentence, explain why boundary cases matter.</p>
+          <p>Then list three boundary scores for this calculator:</p>
+          <ol class="cute-list numbered">
+            <li>______________________</li>
+            <li>______________________</li>
+            <li>______________________</li>
+          </ol>
+        </div>
+        <p class="reflection-prompt">🦁 <em>“Test the edges — that's where bugs hide.”</em></p>
+      </section>
+
+    </div>
+
+    <div class="announcement-box" id="teacherAnnouncement">
+      <h3 class="announcement-title">📢 Announcements</h3>
+      <ol class="announcement-list">
+        <li><em>Announcement space — your teacher will add messages here later.</em></li>
+      </ol>
+    </div>
+
+    <div class="lesson-nav">
+      <a href="unit2-ch5.html" class="nav-button back-to-index">⬅️ Previous: Chapter 5</a>
+      <span class="nav-spacer"></span>
+      <a href="unit2-ch7.html" class="nav-button next-lesson">Next: Chapter 7 ➡️</a>
+    </div>
+
+    <div class="footer-note" style="margin-top: 2rem;">
+      <span>🦁</span> Unit 2 · Chapter 6 — Grade Calculator <span>📊</span>
+    </div>
+
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

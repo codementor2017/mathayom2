@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 2 · Chapter 8: Testing and Debugging</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>">
+</head>
+<body>
+  <div class="book-container lesson-page">
+
+    <header class="lesson-header">
+      <div class="lesson-badge">Unit 2 · Chapter 8</div>
+      <h1>Testing and Debugging</h1>
+      <p class="lesson-subhead">🔧 Find the bug, fix the bug — every coder's superpower!</p>
+      <div class="lesson-meta">
+        <span class="meta-pill">⏱️ 100 minutes</span>
+        <span class="meta-pill">🎯 Grade 8</span>
+        <span class="meta-pill">🔧 Debugging</span>
+      </div>
+    </header>
+
+    <div class="lesson-image-display" role="img" aria-label="Cartoon lion detective examining code with a magnifying glass">
+      <div class="image-placeholder-inner">
+        <div class="image-placeholder-icon">🖼️</div>
+        <div class="image-placeholder-text">
+          <strong>IMAGE PLACEHOLDER — Unit 2, Chapter 8</strong>
+          <p>
+            A bright, flat cartoon in Lion King style. A young lion cub (like Simba) wears a
+            detective hat and holds a giant magnifying glass, inspecting a scroll of Python code.
+            One line is highlighted in red with a bug icon 🐛. A wise older lion (Rafiki)
+            holds a clipboard with a debugging log: Test | Input | Expected | Actual | Fix.
+            Floating icons: 🔧 🐛 ✅. Background: savanna at dusk, acacia trees.
+            Caption at bottom: “Every bug you fix makes you stronger!”
+          </p>
+          <p class="image-placeholder-hint">Recommended size: 1200 × 400 px (wide banner)</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="lesson-section lesson-plan-overview">
+      <h2>📅 Lesson Plan Overview (100 minutes)</h2>
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-time">0–10 min</div><div class="timeline-content"><strong>Warm-Up:</strong> Find the bug in this code.</div></div>
+        <div class="timeline-item"><div class="timeline-time">10–30 min</div><div class="timeline-content"><strong>Direct Teaching:</strong> Testing strategies + debugging log.</div></div>
+        <div class="timeline-item"><div class="timeline-time">30–50 min</div><div class="timeline-content"><strong>Guided Practice:</strong> Testing the grade calculator.</div></div>
+        <div class="timeline-item"><div class="timeline-time">50–60 min</div><div class="timeline-content"><strong>Break:</strong> Stretch, hydrate, brain reset 🦁</div></div>
+        <div class="timeline-item"><div class="timeline-time">60–85 min</div><div class="timeline-content"><strong>Group Activity:</strong> Debug and Improve.</div></div>
+        <div class="timeline-item"><div class="timeline-time">85–95 min</div><div class="timeline-content"><strong>Sharing:</strong> Groups present their fixed code.</div></div>
+        <div class="timeline-item"><div class="timeline-time">95–100 min</div><div class="timeline-content"><strong>Exit Ticket:</strong> One-sentence summary + practice.</div></div>
+      </div>
+    </section>
+
+    <div class="lesson-content">
+
+      <section class="lesson-section">
+        <h2>8.1 Find the Bug <span class="time-tag">⏱️ 0–10 min</span></h2>
+        <p>Read this program:</p>
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.9;">
+          def grade(score):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;if score &gt; 80:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "A"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;elif score &gt; 70:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "B"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;...
+        </div>
+        <p style="margin-top:1rem;"><strong>What is wrong?</strong></p>
+        <p>The comparison should be <code>&gt;=</code>, not <code>&gt;</code>. If the score is exactly 80, the program will return "B" instead of "A".</p>
+        <p>Testing finds bugs. <strong>Debugging</strong> fixes them.</p>
+        <div class="think-box">
+          <strong>🗣️ Think–Pair–Share (2 minutes):</strong>
+          <p>Why do you think it's easy to miss this kind of bug? Share your thoughts with a partner.</p>
+        </div>
+      </section>
+
+      <section class="lesson-section">
+        <h2>8.2 Testing Strategies <span class="time-tag">⏱️ 10–30 min</span></h2>
+        <p>Here are three types of test cases:</p>
+        <ul class="cute-list">
+          <li><strong>Normal case:</strong> Typical input (score = 75).</li>
+          <li><strong>Boundary case:</strong> Edge values (score = 80, 70, 60, 50, 0, 100).</li>
+          <li><strong>Invalid case:</strong> Bad input (score = -10, 150, "abc").</li>
+        </ul>
+        <p><strong>Here is a debugging log:</strong></p>
+        <div class="key-words-table">
+          <div class="key-word-row header">
+            <div>Test</div><div>Input</div><div>Expected</div><div>Actual</div><div>Fix</div>
+          </div>
+          <div class="key-word-row"><div>Normal</div><div>75</div><div>B</div><div>B</div><div>None</div></div>
+          <div class="key-word-row"><div>Boundary</div><div>80</div><div>A</div><div>B</div><div>Change &gt; to &gt;=</div></div>
+          <div class="key-word-row"><div>Invalid</div><div>-10</div><div>Error</div><div>F</div><div>Add validation</div></div>
+        </div>
+        <p style="margin-top:1rem;"><strong>Good testers try to break the program.</strong></p>
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Ask students: "Which bugs are hardest to find — normal, boundary, or invalid?" Most will say boundary, because the errors only appear at exact edge values.
+        </div>
+      </section>
+
+      <section class="lesson-section">
+        <h2>8.3 Testing the Grade Calculator <span class="time-tag">⏱️ 30–50 min</span></h2>
+        <p>Use the grade calculator from Chapter 6.</p>
+        <p><strong>Test with:</strong></p>
+        <ul class="cute-list">
+          <li>85 → A</li>
+          <li>80 → A (boundary)</li>
+          <li>79.9 → B (boundary)</li>
+          <li>0 → F</li>
+          <li>100 → A</li>
+          <li>-5 → Invalid</li>
+          <li>105 → Invalid</li>
+        </ul>
+        <p><strong>Record results in a debugging log. Fix any bugs.</strong></p>
+        <div class="think-box">
+          <strong>🗣️ Quick Check (2 minutes):</strong>
+          <p>Which of these tests is the most important? Why?</p>
+        </div>
+      </section>
+
+      <section class="lesson-section break-box">
+        <h2>☕ Break Time <span class="time-tag">⏱️ 50–60 min</span></h2>
+        <p>Stretch, hydrate, and reset your brain. When you return, you'll debug and improve a buggy program! 🦁</p>
+      </section>
+
+      <section class="lesson-section activity-box">
+        <h2>8.4 Group Activity: Debug and Improve <span class="time-tag">⏱️ 60–85 min</span></h2>
+        <p><strong>Work with a partner.</strong> Your teacher will give you a buggy program with at least <strong>3 bugs</strong>:</p>
+        <ul class="cute-list">
+          <li>Wrong comparison operator.</li>
+          <li>Missing return statement.</li>
+          <li>Wrong variable name.</li>
+          <li>Incorrect Boolean operator.</li>
+        </ul>
+        <p><strong>Your task:</strong></p>
+        <ol class="cute-list numbered">
+          <li>Find the bugs.</li>
+          <li>Fix them.</li>
+          <li>Test with boundary cases.</li>
+          <li>Write a debugging log.</li>
+        </ol>
+        <div class="group-roles">
+          <h4>👥 Suggested Group Roles</h4>
+          <ul class="cute-list">
+            <li><strong>Detective:</strong> finds the bugs.</li>
+            <li><strong>Fixer:</strong> corrects the code.</li>
+            <li><strong>Tester:</strong> runs boundary and invalid cases.</li>
+            <li><strong>Recorder:</strong> fills in the debugging log.</li>
+          </ul>
+        </div>
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Provide a simple buggy program, e.g., a triangle validity checker with the wrong comparison or a pass/fail checker missing a return. Keep it short so students can focus on finding bugs, not reading code.
+        </div>
+      </section>
+
+      <section class="lesson-section">
+        <h2>8.4b Sharing &amp; Presentations <span class="time-tag">⏱️ 85–95 min</span></h2>
+        <p>Each pair will present their debugging log.</p>
+        <p><strong>As you listen, ask yourself:</strong></p>
+        <ul class="cute-list">
+          <li>Did they find all the bugs?</li>
+          <li>Did they use boundary and invalid cases?</li>
+          <li>Is their debugging log clear?</li>
+        </ul>
+        <div class="think-box">
+          <strong>🗣️ Peer Feedback:</strong>
+          <p>Give one <em>star</em> and one <em>wish</em>.</p>
+        </div>
+      </section>
+
+      <section class="lesson-section summary-box">
+        <h2>8.5 Chapter Summary <span class="time-tag">⏱️ 95–97 min</span></h2>
+        <ul class="cute-list">
+          <li>Testing finds bugs. Debugging fixes them.</li>
+          <li>Test with normal, boundary, and invalid cases.</li>
+          <li>A debugging log tracks your testing.</li>
+          <li>Good testers try to break the program.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-section">
+        <h2>8.6 Key Words</h2>
+        <div class="key-words-table">
+          <div class="key-word-row header"><div>Word</div><div>Meaning</div></div>
+          <div class="key-word-row"><div>Test</div><div>Try the program with different inputs</div></div>
+          <div class="key-word-row"><div>Debug</div><div>Find and fix errors</div></div>
+          <div class="key-word-row"><div>Error</div><div>A mistake in the program</div></div>
+          <div class="key-word-row"><div>Boundary case</div><div>An input at the edge</div></div>
+          <div class="key-word-row"><div>Invalid input</div><div>An input that should not work</div></div>
+          <div class="key-word-row"><div>Efficiency</div><div>Getting the best result with the least effort</div></div>
+          <div class="key-word-row"><div>Improve</div><div>Make better</div></div>
+          <div class="key-word-row"><div>Edge case</div><div>A situation at the limit</div></div>
+        </div>
+      </section>
+
+      <section class="lesson-section practice-box">
+        <h2>8.7 Practice &amp; Exit Ticket <span class="time-tag">⏱️ 97–100 min</span></h2>
+        <p><strong>Homework:</strong> What boundary cases would you test for a program that checks if a triangle is valid?</p>
+        <div class="exit-ticket">
+          <h4>🎟️ Exit Ticket — Complete before you leave</h4>
+          <p>In one sentence, explain why testing is important.</p>
+          <p>Then name the three types of test cases:</p>
+          <ol class="cute-list numbered">
+            <li>______________________</li>
+            <li>______________________</li>
+            <li>______________________</li>
+          </ol>
+        </div>
+        <p class="reflection-prompt">🦁 <em>“Test like a detective — think like a bug!”</em></p>
+      </section>
+
+    </div>
+
+    <div class="announcement-box" id="teacherAnnouncement">
+      <h3 class="announcement-title">📢 Announcements</h3>
+      <ol class="announcement-list">
+        <li><em>Announcement space — your teacher will add messages here later.</em></li>
+      </ol>
+    </div>
+
+    <div class="lesson-nav">
+      <a href="unit2-ch7.html" class="nav-button back-to-index">⬅️ Previous: Chapter 7</a>
+      <span class="nav-spacer"></span>
+      <a href="unit2-ch9.html" class="nav-button next-lesson">Next: Chapter 9 ➡️</a>
+    </div>
+
+    <div class="footer-note" style="margin-top: 2rem;">
+      <span>🦁</span> Unit 2 · Chapter 8 — Testing and Debugging <span>🔧</span>
+    </div>
+
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
