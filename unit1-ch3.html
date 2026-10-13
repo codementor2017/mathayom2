@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 1 · Chapter 3: Pattern Recognition — Finding Similarities and Rules</title>
+  <!-- External CSS (inside css folder) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon / emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>">
+</head>
+<body>
+
+  <!-- Main container: consistent with index page -->
+  <div class="book-container lesson-page">
+
+    <!-- ===== HEADER / TITLE ===== -->
+    <header class="lesson-header">
+      <div class="lesson-badge">Unit 1 · Chapter 3</div>
+      <h1>Pattern Recognition — Finding Similarities and Rules</h1>
+      <p class="lesson-subhead">🔍 Spot the pattern — work smarter, not harder!</p>
+
+      <!-- Lesson meta: duration + focus -->
+      <div class="lesson-meta">
+        <span class="meta-pill">⏱️ 100 minutes</span>
+        <span class="meta-pill">🎯 Grade 8</span>
+        <span class="meta-pill">🔍 Pattern Recognition</span>
+      </div>
+    </header>
+
+    <!-- ===== IMAGE (VISIBLE PLACEHOLDER) ===== -->
+    <!--
+      🖼️ IMAGE INSTRUCTIONS FOR THE TEACHER:
+      Replace the <div class="lesson-image-display"> with:
+      <img src="images/unit1-ch3-hero.png" alt="Cartoon lion discovering patterns in numbers and nature" class="lesson-image-display">
+
+      Recommended image (illustration):
+      A bright, flat cartoon in Lion King style. A curious young lion (like Simba) stands in
+      the middle of a savanna, pointing excitedly at floating golden patterns around him:
+      a Fibonacci spiral, a sequence of numbers (2, 4, 8, 16...), zebra stripes forming
+      repeating lines, and a trail of paw prints forming a rhythm. A wise older lion
+      (Rafiki) holds a magnifying glass and smiles. Background: sunrise over the Pride Lands,
+      acacia trees, floating icons (🔍 🧩 📈). Caption at bottom: “See the pattern — solve the puzzle!”
+      Size: 1200 × 400 px (wide banner).
+    -->
+    <div class="lesson-image-display" role="img" aria-label="Cartoon lion discovering patterns in numbers and nature">
+      <div class="image-placeholder-inner">
+        <div class="image-placeholder-icon">🖼️</div>
+        <div class="image-placeholder-text">
+          <strong>IMAGE PLACEHOLDER — Unit 1, Chapter 3</strong>
+          <p>
+            A bright, flat cartoon in Lion King style. A curious young lion (like Simba) stands in
+            the middle of a savanna, pointing excitedly at floating golden patterns around him:
+            a Fibonacci spiral, a sequence of numbers (2, 4, 8, 16...), zebra stripes forming
+            repeating lines, and a trail of paw prints forming a rhythm. A wise older lion
+            (Rafiki) holds a magnifying glass and smiles. Background: sunrise over the Pride Lands,
+            acacia trees, floating icons (🔍 🧩 📈). Caption: “See the pattern — solve the puzzle!”
+          </p>
+          <p class="image-placeholder-hint">Recommended size: 1200 × 400 px (wide banner)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== LESSON PLAN OVERVIEW (100 minutes) ===== -->
+    <section class="lesson-section lesson-plan-overview">
+      <h2>📅 Lesson Plan Overview (100 minutes)</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">0–10 min</div>
+          <div class="timeline-content"><strong>Warm-Up:</strong> What comes next? Sequence puzzle challenge.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">10–25 min</div>
+          <div class="timeline-content"><strong>Direct Teaching:</strong> What is pattern recognition? Patterns everywhere.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">25–45 min</div>
+          <div class="timeline-content"><strong>Guided Practice:</strong> Sorting, height-lining, and shirt organization patterns.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">45–55 min</div>
+          <div class="timeline-content"><strong>Break:</strong> Stretch, hydrate, brain reset 🦁</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">55–80 min</div>
+          <div class="timeline-content"><strong>Group Activity:</strong> Pattern Hunt with real data sets.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">80–95 min</div>
+          <div class="timeline-content"><strong>Gallery Walk:</strong> Groups share their pattern findings.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">95–100 min</div>
+          <div class="timeline-content"><strong>Exit Ticket:</strong> One-sentence summary + practice.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LESSON CONTENT ===== -->
+    <div class="lesson-content">
+
+      <!-- Section 3.1 -->
+      <section class="lesson-section">
+        <h2>3.1 What Comes Next? <span class="time-tag">⏱️ 0–10 min</span></h2>
+        <p>Look at this sequence:</p>
+        <p style="font-size:1.4rem; text-align:center; font-weight:900; color:#8b4a00; letter-spacing:2px;">
+          2, 4, 8, 16, __, __
+        </p>
+        <p>What comes next? How do you know?</p>
+        <p>The pattern is doubling. So the next numbers are <strong>32</strong> and <strong>64</strong>.</p>
+
+        <p>Now look at this sequence:</p>
+        <p style="font-size:1.4rem; text-align:center; font-weight:900; color:#8b4a00; letter-spacing:2px;">
+          1, 1, 2, 3, 5, 8, __, __
+        </p>
+        <p>This is the <strong>Fibonacci sequence</strong>. Each number is the sum of the two before it. So the next numbers are <strong>13</strong> and <strong>21</strong>.</p>
+        <p>Pattern recognition helps us predict and solve faster.</p>
+
+        <div class="think-box">
+          <strong>🗣️ Think–Pair–Share (2 minutes):</strong>
+          <p>Can you think of another sequence you have seen before? (e.g., days of the week, multiplication tables, seasons.)</p>
+        </div>
+      </section>
+
+      <!-- Section 3.2 -->
+      <section class="lesson-section">
+        <h2>3.2 Patterns in Problems <span class="time-tag">⏱️ 10–25 min</span></h2>
+        <p><strong>Pattern recognition</strong> means finding similarities or repeating rules.</p>
+        <p>Here are some examples:</p>
+        <ul class="cute-list">
+          <li><strong>Math:</strong> Multiplication tables, geometric sequences.</li>
+          <li><strong>Science:</strong> Day and night cycle, seasonal changes.</li>
+          <li><strong>Daily life:</strong> Morning routine, traffic patterns.</li>
+          <li><strong>Sorting:</strong> All shirts have sleeves; all socks come in pairs.</li>
+        </ul>
+        <p>When we find a pattern, we can create a <strong>rule</strong> and reuse it.</p>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Show a photo of a zebra and ask students to describe its pattern. Then ask: "What rule could describe this pattern?" (e.g., black-white-black-white stripes).
+        </div>
+      </section>
+
+      <!-- Section 3.3 -->
+      <section class="lesson-section">
+        <h2>3.3 Patterns in Sorting <span class="time-tag">⏱️ 25–35 min</span></h2>
+        <p><strong>Problem:</strong> Arrange 10 random numbers from smallest to largest.</p>
+        <p>Here is a pattern we can use:</p>
+        <ol class="cute-list numbered">
+          <li>Compare two numbers.</li>
+          <li>Swap if the first is bigger.</li>
+          <li>Repeat until sorted.</li>
+        </ol>
+
+        <p>Let's see this in action:</p>
+        <p style="font-size:1.2rem; text-align:center; font-weight:800; color:#8b4a00; background:#fff6d5; padding:0.8rem; border-radius:20px; border:3px dashed #e3b44b;">
+          5, 3, 8, 1 → 3, 5, 8, 1 → 3, 5, 1, 8 → 3, 1, 5, 8 → 1, 3, 5, 8
+        </p>
+
+        <p>This is a pattern we can repeat.</p>
+
+        <div class="think-box">
+          <strong>🗣️ Quick Check (2 minutes):</strong>
+          <p>How many swaps happened in the example above? Count them with your neighbor.</p>
+        </div>
+      </section>
+
+      <!-- Section 3.4 -->
+      <section class="lesson-section">
+        <h2>3.4 Patterns in Height-Lining <span class="time-tag">⏱️ 35–40 min</span></h2>
+        <p><strong>Problem:</strong> Line up students by height as fast as possible.</p>
+        <p><strong>Pattern:</strong> Shorter people go to the front; taller people go to the back.</p>
+        <p><strong>Rule:</strong> Compare each person's height with the next. Swap if they are in the wrong order. Repeat until sorted.</p>
+      </section>
+
+      <!-- Section 3.5 -->
+      <section class="lesson-section">
+        <h2>3.5 Patterns in Shirt Organization <span class="time-tag">⏱️ 40–45 min</span></h2>
+        <p><strong>Problem:</strong> Arrange shirts so you can find them easily.</p>
+        <p><strong>Pattern:</strong> Shirts are worn more often if they are comfortable.</p>
+        <p><strong>Rule:</strong> Put most-worn shirts at eye level.</p>
+
+        <div class="think-box">
+          <strong>🗣️ Class Discussion (2 minutes):</strong>
+          <p>What other patterns could you use to organize a wardrobe? (e.g., by color, by season, by type.)</p>
+        </div>
+      </section>
+
+      <!-- ===== BREAK ===== -->
+      <section class="lesson-section break-box">
+        <h2>☕ Break Time <span class="time-tag">⏱️ 45–55 min</span></h2>
+        <p>Stretch, hydrate, and reset your brain. When you return, you'll go on a pattern hunt with real data! 🦁</p>
+      </section>
+
+      <!-- Section 3.6 Activity -->
+      <section class="lesson-section activity-box">
+        <h2>3.6 Group Activity: Pattern Hunt with Data <span class="time-tag">⏱️ 55–80 min</span></h2>
+        <p><strong>Work in a group of 3–4.</strong> Your teacher will give you a data set:</p>
+        <ul class="cute-list">
+          <li>Class test scores across 5 subjects.</li>
+          <li>Daily temperatures for 2 weeks.</li>
+          <li>Heights of 20 students.</li>
+          <li>Number of cars passing the school gate each hour.</li>
+          <li>Minutes spent on homework each day for 2 weeks.</li>
+        </ul>
+
+        <p><strong>Find patterns in your data:</strong></p>
+        <ol class="cute-list numbered">
+          <li>What is similar?</li>
+          <li>What is different?</li>
+          <li>What rule can describe the pattern?</li>
+          <li>What prediction can you make?</li>
+        </ol>
+
+        <p><strong>Write the pattern rule and your prediction.</strong> Be ready to explain your reasoning.</p>
+
+        <div class="group-roles">
+          <h4>👥 Suggested Group Roles</h4>
+          <ul class="cute-list">
+            <li><strong>Data Analyst:</strong> reads the numbers and finds similarities.</li>
+            <li><strong>Rule Writer:</strong> writes the pattern rule in words.</li>
+            <li><strong>Predictor:</strong> makes a prediction based on the rule.</li>
+            <li><strong>Presenter:</strong> explains the findings to the class.</li>
+          </ul>
+        </div>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Ask students: "Is this a strong pattern or a weak one? How confident are you in your prediction?" This builds critical thinking.
+        </div>
+      </section>
+
+      <!-- Section 3.6b Gallery Walk -->
+      <section class="lesson-section">
+        <h2>3.6b Gallery Walk &amp; Presentations <span class="time-tag">⏱️ 80–95 min</span></h2>
+        <p>Each group will present their pattern rule and prediction. Listen carefully to each group.</p>
+        <p><strong>As you listen, ask yourself:</strong></p>
+        <ul class="cute-list">
+          <li>Did they find a real pattern in the data?</li>
+          <li>Is their rule clear?</li>
+          <li>Does their prediction make sense?</li>
+          <li>Could their pattern be a coincidence?</li>
+        </ul>
+        <p>Then each group's <strong>Presenter</strong> gives a <strong>2-minute explanation</strong> of their findings.</p>
+
+        <div class="think-box">
+          <strong>🗣️ Peer Feedback:</strong>
+          <p>After each presentation, give one <em>star</em> (something you liked) and one <em>wish</em> (something that could be improved).</p>
+        </div>
+      </section>
+
+      <!-- Section 3.7 Summary -->
+      <section class="lesson-section summary-box">
+        <h2>3.7 Chapter Summary <span class="time-tag">⏱️ 95–97 min</span></h2>
+        <ul class="cute-list">
+          <li>Pattern recognition means finding similarities or repeating rules.</li>
+          <li>Patterns help us predict and solve faster.</li>
+          <li>When we find a pattern, we can create a rule and reuse it.</li>
+          <li>Patterns exist in math, science, daily life, and sorting.</li>
+        </ul>
+      </section>
+
+      <!-- Section 3.8 Key Words -->
+      <section class="lesson-section">
+        <h2>3.8 Key Words</h2>
+        <div class="key-words-table">
+          <div class="key-word-row header">
+            <div>Word</div>
+            <div>Meaning</div>
+          </div>
+          <div class="key-word-row">
+            <div>Pattern</div>
+            <div>A repeating or similar structure</div>
+          </div>
+          <div class="key-word-row">
+            <div>Pattern recognition</div>
+            <div>Finding similarities or repeating rules</div>
+          </div>
+          <div class="key-word-row">
+            <div>Repetition</div>
+            <div>Doing something again</div>
+          </div>
+          <div class="key-word-row">
+            <div>Similarity</div>
+            <div>Being alike</div>
+          </div>
+          <div class="key-word-row">
+            <div>Sequence</div>
+            <div>An ordered list</div>
+          </div>
+          <div class="key-word-row">
+            <div>Trend</div>
+            <div>A pattern over time</div>
+          </div>
+          <div class="key-word-row">
+            <div>Rule</div>
+            <div>A general instruction</div>
+          </div>
+          <div class="key-word-row">
+            <div>Generalize</div>
+            <div>Create a rule that applies to many cases</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3.9 Practice + Exit Ticket -->
+      <section class="lesson-section practice-box">
+        <h2>3.9 Practice &amp; Exit Ticket <span class="time-tag">⏱️ 97–100 min</span></h2>
+        <p><strong>Homework:</strong> Find one pattern at home (in your wardrobe, kitchen, or daily schedule) and write the rule.</p>
+
+        <div class="exit-ticket">
+          <h4>🎟️ Exit Ticket — Complete before you leave</h4>
+          <p>In one sentence, explain what pattern recognition is.</p>
+          <p>Then complete this sequence and write the rule:</p>
+          <p style="text-align:center; font-size:1.2rem; font-weight:900; color:#8b4a00; letter-spacing:2px;">
+            3, 6, 12, 24, __, __
+          </p>
+          <p>Rule: ______________________</p>
+        </div>
+
+        <p class="reflection-prompt">🦁 <em>“Once you see the pattern, you can never unsee it.”</em></p>
+      </section>
+
+    </div> <!-- end lesson-content -->
+
+    <!-- ===== TEACHER ANNOUNCEMENT BOX (grows with content) ===== -->
+    <!--
+      📢 TEACHER ANNOUNCEMENT BOX
+      ─────────────────────────────────────────────────────────
+      This block grows automatically when you add <li> items.
+      Replace the example <li> below with your own announcements.
+    -->
+    <div class="announcement-box" id="teacherAnnouncement">
+      <h3 class="announcement-title">📢 Announcements</h3>
+      <ol class="announcement-list">
+        <li><em>Announcement space — your teacher will add messages here later.</em></li>
+      </ol>
+    </div>
+
+    <!-- ===== NAVIGATION / FOOTER ===== -->
+    <div class="lesson-nav">
+      <a href="unit1-ch2.html" class="nav-button back-to-index">⬅️ Previous: Chapter 2</a>
+      <span class="nav-spacer"></span>
+      <a href="unit1-ch4.html" class="nav-button next-lesson">Next: Chapter 4 ➡️</a>
+    </div>
+
+    <div class="footer-note" style="margin-top: 2rem;">
+      <span>🦁</span> Unit 1 · Chapter 3 — Pattern Recognition <span>🔍</span>
+    </div>
+
+  </div> <!-- end book-container -->
+
+  <!-- External JavaScript (inside js folder) -->
+  <script src="js/script.js"></script>
+</body>
+</html>

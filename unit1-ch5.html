@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 1 · Chapter 5: Algorithm Design — Step-by-Step Instructions</title>
+  <!-- External CSS (inside css folder) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon / emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>">
+</head>
+<body>
+
+  <!-- Main container: consistent with index page -->
+  <div class="book-container lesson-page">
+
+    <!-- ===== HEADER / TITLE ===== -->
+    <header class="lesson-header">
+      <div class="lesson-badge">Unit 1 · Chapter 5</div>
+      <h1>Algorithm Design — Step-by-Step Instructions</h1>
+      <p class="lesson-subhead">📋 Clear steps, correct order, no confusion!</p>
+
+      <!-- Lesson meta: duration + focus -->
+      <div class="lesson-meta">
+        <span class="meta-pill">⏱️ 100 minutes</span>
+        <span class="meta-pill">🎯 Grade 8</span>
+        <span class="meta-pill">📋 Algorithm Design</span>
+      </div>
+    </header>
+
+    <!-- ===== IMAGE (VISIBLE PLACEHOLDER) ===== -->
+    <!--
+      🖼️ IMAGE INSTRUCTIONS FOR THE TEACHER:
+      Replace the <div class="lesson-image-display"> with:
+      <img src="images/unit1-ch5-hero.png" alt="Cartoon lion following a step-by-step recipe to make a sandwich" class="lesson-image-display">
+
+      Recommended image (illustration):
+      A bright, flat cartoon in Lion King style. A young lion cub (like Simba) stands at a
+      kitchen counter with a confused expression, holding a closed jar of peanut butter
+      pressed against a slice of bread (the "wrong" way). A wise older lion (Rafiki)
+      holds up a numbered checklist labeled "ALGORITHM" with steps:
+      1. Open jar. 2. Take bread. 3. Spread peanut butter. 4. Close jar. 5. Eat!
+      Background: savanna-themed kitchen with acacia-wood counters, floating icons
+      (📋 ✅ 🔢). Caption at bottom: “Clear steps = no mistakes!”
+      Size: 1200 × 400 px (wide banner).
+    -->
+    <div class="lesson-image-display" role="img" aria-label="Cartoon lion following a step-by-step recipe to make a sandwich">
+      <div class="image-placeholder-inner">
+        <div class="image-placeholder-icon">🖼️</div>
+        <div class="image-placeholder-text">
+          <strong>IMAGE PLACEHOLDER — Unit 1, Chapter 5</strong>
+          <p>
+            A bright, flat cartoon in Lion King style. A young lion cub (like Simba) stands at a
+            kitchen counter with a confused expression, holding a closed jar of peanut butter
+            pressed against a slice of bread (the "wrong" way). A wise older lion (Rafiki)
+            holds up a numbered checklist labeled "ALGORITHM" with steps:
+            1. Open jar. 2. Take bread. 3. Spread peanut butter. 4. Close jar. 5. Eat!
+            Background: savanna-themed kitchen with acacia-wood counters, floating icons
+            (📋 ✅ 🔢). Caption: “Clear steps = no mistakes!”
+          </p>
+          <p class="image-placeholder-hint">Recommended size: 1200 × 400 px (wide banner)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== LESSON PLAN OVERVIEW (100 minutes) ===== -->
+    <section class="lesson-section lesson-plan-overview">
+      <h2>📅 Lesson Plan Overview (100 minutes)</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">0–10 min</div>
+          <div class="timeline-content"><strong>Warm-Up:</strong> The Sandwich Challenge — why instructions matter.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">10–25 min</div>
+          <div class="timeline-content"><strong>Direct Teaching:</strong> Parts of an algorithm + rules + pseudocode.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">25–45 min</div>
+          <div class="timeline-content"><strong>Guided Practice:</strong> Height-lining algorithm + pseudocode walkthrough.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">45–55 min</div>
+          <div class="timeline-content"><strong>Break:</strong> Stretch, hydrate, brain reset 🦁</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">55–80 min</div>
+          <div class="timeline-content"><strong>Group Activity:</strong> Write &amp; compare two algorithms for the same task.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">80–95 min</div>
+          <div class="timeline-content"><strong>Gallery Walk:</strong> Groups swap algorithms and test them.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">95–100 min</div>
+          <div class="timeline-content"><strong>Exit Ticket:</strong> One-sentence summary + practice.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LESSON CONTENT ===== -->
+    <div class="lesson-content">
+
+      <!-- Section 5.1 -->
+      <section class="lesson-section">
+        <h2>5.1 Follow the Instructions <span class="time-tag">⏱️ 0–10 min</span></h2>
+        <p>Imagine you ask someone to make a sandwich.</p>
+        <p>They say: <em>"Put peanut butter on bread."</em></p>
+        <p>But they forgot to say <em>"open the jar."</em> So you put the closed jar on the bread.</p>
+        <p><strong>What was missing?</strong> The instructions were not clear.</p>
+        <p>An algorithm must be <strong>clear</strong> and <strong>complete</strong>.</p>
+
+        <div class="think-box">
+          <strong>🗣️ Think–Pair–Share (2 minutes):</strong>
+          <p>Have you ever followed instructions that were missing a step? What happened? Share with your partner.</p>
+        </div>
+      </section>
+
+      <!-- Section 5.2 -->
+      <section class="lesson-section">
+        <h2>5.2 Parts of an Algorithm <span class="time-tag">⏱️ 10–25 min</span></h2>
+        <p>Every algorithm has three parts:</p>
+
+        <div class="pillar-grid">
+          <div class="pillar-card">
+            <span class="pillar-emoji">📥</span>
+            <h3>Input</h3>
+            <p>What do we start with?</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-emoji">⚙️</span>
+            <h3>Process</h3>
+            <p>What steps do we follow?</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-emoji">📤</span>
+            <h3>Output</h3>
+            <p>What do we end with?</p>
+          </div>
+        </div>
+
+        <p><strong>Rules for algorithms:</strong></p>
+        <ul class="cute-list">
+          <li>Clear steps.</li>
+          <li>Correct order.</li>
+          <li>Finite (has an end).</li>
+          <li>No ambiguity.</li>
+        </ul>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Ask students: "What happens if we swap step 1 and step 2 of making a sandwich?" This shows why <em>order</em> matters.
+        </div>
+      </section>
+
+      <!-- Section 5.3 -->
+      <section class="lesson-section">
+        <h2>5.3 Example: Algorithm to Line Up by Height <span class="time-tag">⏱️ 25–35 min</span></h2>
+        <p><strong>Input:</strong> A group of students with different heights.</p>
+        <p><strong>Process:</strong></p>
+        <ol class="cute-list numbered">
+          <li>Stand in a line.</li>
+          <li>Compare the first two people. If the first is taller, swap them.</li>
+          <li>Move to the next pair. Repeat.</li>
+          <li>Continue until no swaps are needed.</li>
+        </ol>
+        <p><strong>Output:</strong> A line ordered from shortest to tallest.</p>
+
+        <div class="think-box">
+          <strong>🗣️ Quick Check (2 minutes):</strong>
+          <p>Why is "continue until no swaps are needed" important? What if we stopped early?</p>
+        </div>
+      </section>
+
+      <!-- Section 5.4 -->
+      <section class="lesson-section">
+        <h2>5.4 Pseudocode <span class="time-tag">⏱️ 35–45 min</span></h2>
+        <p><strong>Pseudocode</strong> is a simple way to write an algorithm.</p>
+
+        <div style="background:#fff6d5; border:3px dashed #e3b44b; border-radius:20px; padding:1.2rem 1.5rem; font-family:'Courier New', monospace; font-size:1.05rem; color:#4b2e0b; line-height:1.8;">
+          START<br>
+          LINE UP students randomly<br><br>
+          REPEAT<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;FOR each pair of students<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IF first is taller than second THEN<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SWAP them<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END IF<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;END FOR<br>
+          UNTIL no swaps needed<br><br>
+          END
+        </div>
+
+        <p style="margin-top:1rem;">Notice how pseudocode uses everyday language mixed with clear structure. It is not tied to any programming language.</p>
+      </section>
+
+      <!-- ===== BREAK ===== -->
+      <section class="lesson-section break-box">
+        <h2>☕ Break Time <span class="time-tag">⏱️ 45–55 min</span></h2>
+        <p>Stretch, hydrate, and reset your brain. When you return, you'll write and compare your own algorithms! 🦁</p>
+      </section>
+
+      <!-- Section 5.5 Activity -->
+      <section class="lesson-section activity-box">
+        <h2>5.5 Activity: Write an Algorithm for Lining Up <span class="time-tag">⏱️ 55–65 min</span></h2>
+        <p><strong>How can our class line up by height as quickly as possible?</strong></p>
+        <p>Write an algorithm:</p>
+        <ol class="cute-list numbered">
+          <li><strong>Step 1:</strong> Everyone stands in a random line.</li>
+          <li><strong>Step 2:</strong> Compare the first two people; swap if the first is taller.</li>
+          <li><strong>Step 3:</strong> Move to the next pair; repeat.</li>
+          <li><strong>Step 4:</strong> After one full pass, the tallest is at the end.</li>
+          <li><strong>Step 5:</strong> Repeat passes until the line is sorted.</li>
+        </ol>
+
+        <p><strong>Test the algorithm with 5 volunteers.</strong></p>
+        <ul class="cute-list">
+          <li>Time how long it takes.</li>
+          <li>Can you make it faster?</li>
+        </ul>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Use 5 students with visibly different heights. Have the class count the swaps out loud. Record the time on the board.
+        </div>
+      </section>
+
+      <!-- Section 5.6 Activity -->
+      <section class="lesson-section activity-box">
+        <h2>5.6 Activity: Write and Compare Algorithms <span class="time-tag">⏱️ 65–80 min</span></h2>
+        <p><strong>Work in a group.</strong> Choose a task:</p>
+        <ul class="cute-list">
+          <li>Arrange shirts to find them easily.</li>
+          <li>Organize a bookshelf.</li>
+          <li>Pack a suitcase for a 3-day trip.</li>
+          <li>Set the table for a family dinner.</li>
+          <li>Prepare a study plan for 5 subjects.</li>
+        </ul>
+
+        <p><strong>Write two different algorithms for the same task.</strong></p>
+
+        <p><strong>Then compare:</strong></p>
+        <ul class="cute-list">
+          <li>Which is faster?</li>
+          <li>Which is easier to follow?</li>
+          <li>Which uses fewer steps?</li>
+        </ul>
+
+        <p><strong>Test by having another group follow the steps exactly.</strong></p>
+
+        <div class="group-roles">
+          <h4>👥 Suggested Group Roles</h4>
+          <ul class="cute-list">
+            <li><strong>Writer A:</strong> writes algorithm 1.</li>
+            <li><strong>Writer B:</strong> writes algorithm 2.</li>
+            <li><strong>Tester:</strong> reads the algorithm aloud step by step.</li>
+            <li><strong>Timer:</strong> measures how long each algorithm takes.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section 5.6b Gallery Walk -->
+      <section class="lesson-section">
+        <h2>5.6b Gallery Walk &amp; Presentations <span class="time-tag">⏱️ 80–95 min</span></h2>
+        <p>Each group will present their two algorithms. The class will compare and discuss.</p>
+        <p><strong>As you listen, ask yourself:</strong></p>
+        <ul class="cute-list">
+          <li>Is the algorithm clear and complete?</li>
+          <li>Is the order correct?</li>
+          <li>Does it have a clear end?</li>
+          <li>Which algorithm is more efficient?</li>
+        </ul>
+        <p>Then each group's <strong>Presenter</strong> gives a <strong>2-minute explanation</strong> of their comparison.</p>
+
+        <div class="think-box">
+          <strong>🗣️ Peer Feedback:</strong>
+          <p>After each presentation, give one <em>star</em> (something you liked) and one <em>wish</em> (something that could be improved).</p>
+        </div>
+      </section>
+
+      <!-- Section 5.7 Summary -->
+      <section class="lesson-section summary-box">
+        <h2>5.7 Chapter Summary <span class="time-tag">⏱️ 95–97 min</span></h2>
+        <ul class="cute-list">
+          <li>An algorithm is a clear, ordered set of steps.</li>
+          <li>Every algorithm has input, process, and output.</li>
+          <li>Algorithms must be clear, ordered, finite, and unambiguous.</li>
+          <li>There is often more than one algorithm for the same problem.</li>
+        </ul>
+      </section>
+
+      <!-- Section 5.8 Key Words -->
+      <section class="lesson-section">
+        <h2>5.8 Key Words</h2>
+        <div class="key-words-table">
+          <div class="key-word-row header">
+            <div>Word</div>
+            <div>Meaning</div>
+          </div>
+          <div class="key-word-row">
+            <div>Algorithm</div>
+            <div>A clear, ordered set of steps</div>
+          </div>
+          <div class="key-word-row">
+            <div>Sequence</div>
+            <div>The order of steps</div>
+          </div>
+          <div class="key-word-row">
+            <div>Order</div>
+            <div>The arrangement of steps</div>
+          </div>
+          <div class="key-word-row">
+            <div>Step</div>
+            <div>One action in an algorithm</div>
+          </div>
+          <div class="key-word-row">
+            <div>Input</div>
+            <div>What goes into the algorithm</div>
+          </div>
+          <div class="key-word-row">
+            <div>Output</div>
+            <div>What comes out of the algorithm</div>
+          </div>
+          <div class="key-word-row">
+            <div>Process</div>
+            <div>The steps in between</div>
+          </div>
+          <div class="key-word-row">
+            <div>Test</div>
+            <div>Try the algorithm with different inputs</div>
+          </div>
+          <div class="key-word-row">
+            <div>Compare</div>
+            <div>Look at differences and similarities</div>
+          </div>
+          <div class="key-word-row">
+            <div>Efficiency</div>
+            <div>Getting the best result with the least effort</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5.9 Practice + Exit Ticket -->
+      <section class="lesson-section practice-box">
+        <h2>5.9 Practice &amp; Exit Ticket <span class="time-tag">⏱️ 97–100 min</span></h2>
+        <p><strong>Homework:</strong> Write a 5-step algorithm for a task you do every morning.</p>
+
+        <div class="exit-ticket">
+          <h4>🎟️ Exit Ticket — Complete before you leave</h4>
+          <p>In one sentence, explain what an algorithm is.</p>
+          <p>Then write the 3 parts of every algorithm:</p>
+          <ol class="cute-list numbered">
+            <li>______________________</li>
+            <li>______________________</li>
+            <li>______________________</li>
+          </ol>
+        </div>
+
+        <p class="reflection-prompt">🦁 <em>“A good algorithm leaves no room for guessing.”</em></p>
+      </section>
+
+    </div> <!-- end lesson-content -->
+
+    <!-- ===== TEACHER ANNOUNCEMENT BOX (grows with content) ===== -->
+    <!--
+      📢 TEACHER ANNOUNCEMENT BOX
+      ─────────────────────────────────────────────────────────
+      This block grows automatically when you add <li> items.
+      Replace the example <li> below with your own announcements.
+    -->
+    <div class="announcement-box" id="teacherAnnouncement">
+      <h3 class="announcement-title">📢 Announcements</h3>
+      <ol class="announcement-list">
+        <li><em>Announcement space — your teacher will add messages here later.</em></li>
+      </ol>
+    </div>
+
+    <!-- ===== NAVIGATION / FOOTER ===== -->
+    <div class="lesson-nav">
+      <a href="unit1-ch4.html" class="nav-button back-to-index">⬅️ Previous: Chapter 4</a>
+      <span class="nav-spacer"></span>
+      <a href="unit1-ch6.html" class="nav-button next-lesson">Next: Chapter 6 ➡️</a>
+    </div>
+
+    <div class="footer-note" style="margin-top: 2rem;">
+      <span>🦁</span> Unit 1 · Chapter 5 — Algorithm Design <span>📋</span>
+    </div>
+
+  </div> <!-- end book-container -->
+
+  <!-- External JavaScript (inside js folder) -->
+  <script src="js/script.js"></script>
+</body>
+</html>

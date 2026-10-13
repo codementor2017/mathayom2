@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 1 · Chapter 1: What is Computational Thinking?</title>
+  <!-- External CSS (inside css folder) -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon / emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>">
+</head>
+<body>
+
+  <!-- Main container: consistent with index page -->
+  <div class="book-container lesson-page">
+
+    <!-- ===== HEADER / TITLE ===== -->
+    <header class="lesson-header">
+      <div class="lesson-badge">Unit 1 · Chapter 1</div>
+      <h1>What is Computational Thinking?</h1>
+      <p class="lesson-subhead">🦁 Think like a computer scientist — break big problems into small ones!</p>
+
+      <!-- Lesson meta: duration + focus -->
+      <div class="lesson-meta">
+        <span class="meta-pill">⏱️ 100 minutes</span>
+        <span class="meta-pill">🎯 Grade 8</span>
+        <span class="meta-pill">🧠 Four Pillars of CT</span>
+      </div>
+    </header>
+
+    <!-- ===== IMAGE (VISIBLE PLACEHOLDER) ===== -->
+    <!--
+      🖼️ IMAGE INSTRUCTIONS FOR THE TEACHER:
+      Replace the <div class="lesson-image-display"> with:
+      <img src="images/unit1-ch1-hero.png" alt="Cartoon lion breaking a big problem into small pieces" class="lesson-image-display">
+
+      Recommended image (illustration):
+      A bright, flat cartoon in Lion King style. A wise older lion (like Rafiki) with round glasses
+      sits on a tree branch, holding a laptop. In front of him, a younger lion cub (like Simba)
+      looks at a big tangled ball of "problem" yarn on the left, and a neat row of small colorful
+      "task" blocks on the right (labeled: Clothes, Books, Papers, Bed, Floor). Background: savanna
+      at sunrise, acacia tree, floating icons (🧩 🔍 🎯 📋). Caption: “Break it down — one step at a time!”
+      Size: 1200 × 400 px (wide banner).
+    -->
+    <div class="lesson-image-display" role="img" aria-label="Cartoon lion breaking a big problem into smaller tasks">
+      <div class="image-placeholder-inner">
+        <div class="image-placeholder-icon">🖼️</div>
+        <div class="image-placeholder-text">
+          <strong>IMAGE PLACEHOLDER — Unit 1, Chapter 1</strong>
+          <p>
+            A bright, flat cartoon in Lion King style. A wise older lion (like Rafiki) with round glasses
+            sits on a tree branch, holding a laptop. In front of him, a younger lion cub (like Simba)
+            looks at a big tangled ball of "problem" yarn on the left, and a neat row of small colorful
+            "task" blocks on the right (labeled: Clothes, Books, Papers, Bed, Floor). Background: savanna
+            at sunrise, acacia tree, floating icons (🧩 🔍 🎯 📋). Caption: “Break it down — one step at a time!”
+          </p>
+          <p class="image-placeholder-hint">Recommended size: 1200 × 400 px (wide banner)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== LESSON PLAN OVERVIEW (100 minutes) ===== -->
+    <section class="lesson-section lesson-plan-overview">
+      <h2>📅 Lesson Plan Overview (100 minutes)</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">0–10 min</div>
+          <div class="timeline-content"><strong>Warm-Up:</strong> The Messy Room Challenge.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">10–25 min</div>
+          <div class="timeline-content"><strong>Direct Teaching:</strong> What is CT? The four pillars.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">25–45 min</div>
+          <div class="timeline-content"><strong>Guided Practice:</strong> Sports Day &amp; Cafeteria examples.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">45–55 min</div>
+          <div class="timeline-content"><strong>Break:</strong> Stretch, hydrate, brain reset 🦁</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">55–80 min</div>
+          <div class="timeline-content"><strong>Group Activity:</strong> Apply the four pillars + poster.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">80–95 min</div>
+          <div class="timeline-content"><strong>Gallery Walk:</strong> Groups share their posters.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">95–100 min</div>
+          <div class="timeline-content"><strong>Exit Ticket:</strong> One-sentence summary + practice.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LESSON CONTENT ===== -->
+    <div class="lesson-content">
+
+      <!-- Section 1.1 -->
+      <section class="lesson-section">
+        <h2>1.1 The Messy Room Problem <span class="time-tag">⏱️ 0–10 min</span></h2>
+        <p>Imagine your room is very messy. Clothes are on the floor. Books are piled on your desk. Papers are scattered everywhere. You need to clean it in 30 minutes.</p>
+        <p><strong>What do you do?</strong></p>
+        <p>Most people would naturally break the task into smaller parts:</p>
+        <ul class="cute-list">
+          <li>Pick up the clothes.</li>
+          <li>Organize the books.</li>
+          <li>Sort the papers.</li>
+          <li>Make the bed.</li>
+          <li>Sweep the floor.</li>
+        </ul>
+        <p>You just used <strong>computational thinking</strong> without knowing it.</p>
+        <p>Computational thinking is a formal way of solving problems like a computer scientist. It helps you break big problems into smaller, manageable parts and find efficient solutions.</p>
+
+        <div class="think-box">
+          <strong>🗣️ Think–Pair–Share (2 minutes):</strong>
+          <p>Turn to a partner. Describe a time you broke a big task into smaller steps. What were the steps? Why did it help?</p>
+        </div>
+      </section>
+
+      <!-- Section 1.2 -->
+      <section class="lesson-section">
+        <h2>1.2 The Four Pillars <span class="time-tag">⏱️ 10–25 min</span></h2>
+        <p>Computational thinking has four pillars:</p>
+        <div class="pillar-grid">
+          <div class="pillar-card">
+            <span class="pillar-emoji">🧩</span>
+            <h3>Decomposition</h3>
+            <p>Break the problem into smaller parts.</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-emoji">🔍</span>
+            <h3>Pattern Recognition</h3>
+            <p>Look for patterns or similarities.</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-emoji">🎯</span>
+            <h3>Abstraction</h3>
+            <p>Focus on important details; ignore the rest.</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-emoji">📋</span>
+            <h3>Algorithm Design</h3>
+            <p>Write step-by-step instructions.</p>
+          </div>
+        </div>
+        <p>These four pillars help us solve any problem efficiently.</p>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Use a tangled ball of yarn (the problem) and small labeled blocks (sub-problems). Let students "untangle" it one piece at a time.
+        </div>
+      </section>
+
+      <!-- Section 1.3 -->
+      <section class="lesson-section">
+        <h2>1.3 A Formal Example: Planning a School Sports Day <span class="time-tag">⏱️ 25–35 min</span></h2>
+        <p>Let's apply the four pillars to a real problem.</p>
+        <p><strong>Problem:</strong> Plan a school sports day.</p>
+
+        <div class="pillar-application">
+          <div class="pillar-app-item">
+            <h4>🧩 Decomposition</h4>
+            <ul class="cute-list">
+              <li>Venue</li>
+              <li>Events</li>
+              <li>Participants</li>
+              <li>Equipment</li>
+              <li>Food</li>
+              <li>First aid</li>
+              <li>Schedule</li>
+            </ul>
+          </div>
+          <div class="pillar-app-item">
+            <h4>🔍 Pattern Recognition</h4>
+            <p>Last year's event worked well. We can reuse the schedule structure.</p>
+          </div>
+          <div class="pillar-app-item">
+            <h4>🎯 Abstraction</h4>
+            <p><strong>Essential:</strong> number of students, number of events, budget.</p>
+            <p><strong>Non-essential:</strong> banner color, music choice.</p>
+          </div>
+          <div class="pillar-app-item">
+            <h4>📋 Algorithm</h4>
+            <ol class="cute-list numbered">
+              <li>Book venue.</li>
+              <li>Open registration.</li>
+              <li>Assign events.</li>
+              <li>Prepare equipment.</li>
+              <li>Run event.</li>
+              <li>Evaluate.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="think-box">
+          <strong>🗣️ Quick Check (2 minutes):</strong>
+          <p>Why is "banner color" considered non-essential in the abstraction step? Share with your neighbor.</p>
+        </div>
+      </section>
+
+      <!-- Section 1.4 -->
+      <section class="lesson-section">
+        <h2>1.4 Applying the Pillars <span class="time-tag">⏱️ 35–45 min</span></h2>
+        <p>Let's try another problem.</p>
+        <p><strong>Problem:</strong> Design a system for a school cafeteria that reduces waiting time.</p>
+
+        <div class="pillar-application">
+          <div class="pillar-app-item">
+            <h4>🧩 Decomposition</h4>
+            <ul class="cute-list">
+              <li>Menu design</li>
+              <li>Payment system</li>
+              <li>Seating</li>
+              <li>Serving stations</li>
+              <li>Queue management</li>
+            </ul>
+          </div>
+          <div class="pillar-app-item">
+            <h4>🔍 Pattern Recognition</h4>
+            <p>Peak times are the same every day. Popular dishes cause longer queues.</p>
+          </div>
+          <div class="pillar-app-item">
+            <h4>🎯 Abstraction</h4>
+            <p><strong>Essential:</strong> number of students, serving speed, payment method.</p>
+            <p><strong>Non-essential:</strong> cafeteria wall color, uniform of staff.</p>
+          </div>
+          <div class="pillar-app-item">
+            <h4>📋 Algorithm</h4>
+            <ol class="cute-list numbered">
+              <li>Count students per lunch period.</li>
+              <li>Measure serving time per student.</li>
+              <li>Calculate number of serving stations needed.</li>
+              <li>Assign stations.</li>
+              <li>Test and adjust.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="think-box">
+          <strong>🗣️ Class Discussion (3 minutes):</strong>
+          <p>What other patterns might you find in a cafeteria?</p>
+        </div>
+      </section>
+
+      <!-- ===== BREAK ===== -->
+      <section class="lesson-section break-box">
+        <h2>☕ Break Time <span class="time-tag">⏱️ 45–55 min</span></h2>
+        <p>Stretch, hydrate, and reset your brain. When you return, you'll work in groups to design your own computational thinking solution! 🦁</p>
+      </section>
+
+      <!-- Section 1.5 Activity -->
+      <section class="lesson-section activity-box">
+        <h2>1.5 Group Activity: Computational Thinking Analysis <span class="time-tag">⏱️ 55–80 min</span></h2>
+        <p><strong>Work in a group of 3–4.</strong> Your teacher will give you a complex scenario. You have 25 minutes to complete the task.</p>
+
+        <p><strong>Your task — apply the four pillars:</strong></p>
+        <ul class="cute-list">
+          <li><strong>Decompose</strong> into at least 5 sub-problems.</li>
+          <li><strong>Identify</strong> at least 2 patterns.</li>
+          <li><strong>Create an abstraction</strong> (list essential vs non-essential details).</li>
+          <li><strong>Write an algorithm</strong> with at least 8 steps.</li>
+        </ul>
+
+        <p><strong>Then create a poster</strong> showing all four pillars. Use colors, drawings, and clear labels.</p>
+
+        <div class="group-roles">
+          <h4>👥 Suggested Group Roles</h4>
+          <ul class="cute-list">
+            <li><strong>Recorder:</strong> writes down ideas and steps.</li>
+            <li><strong>Illustrator:</strong> draws the poster and icons.</li>
+            <li><strong>Presenter:</strong> explains the poster to the class.</li>
+            <li><strong>Timekeeper:</strong> keeps the group on schedule.</li>
+          </ul>
+        </div>
+
+        <button class="cta-button" id="pillarReminder">🦁 Show me the four pillars again!</button>
+        <div id="pillarOutput" class="pillar-output"></div>
+
+        <div class="teacher-tip">
+          <strong>👩‍🏫 Tip:</strong> Circulate and ask: "What is the biggest part?" "Have you seen this before?" "What can we ignore?" "What's first?"
+        </div>
+      </section>
+
+      <!-- Section 1.5b Gallery Walk -->
+      <section class="lesson-section">
+        <h2>1.5b Gallery Walk &amp; Presentations <span class="time-tag">⏱️ 80–95 min</span></h2>
+        <p>Each group will display their poster. Walk around and look at other groups' work.</p>
+        <p><strong>As you visit each poster, ask yourself:</strong></p>
+        <ul class="cute-list">
+          <li>Did they decompose the problem clearly?</li>
+          <li>Did they find real patterns?</li>
+          <li>Did their abstraction make sense?</li>
+          <li>Was their algorithm easy to follow?</li>
+        </ul>
+        <p>Then each group's <strong>Presenter</strong> gives a <strong>2-minute explanation</strong> of their poster to the class.</p>
+
+        <div class="think-box">
+          <strong>🗣️ Peer Feedback:</strong>
+          <p>After each presentation, give one <em>star</em> (something you liked) and one <em>wish</em> (something that could be improved).</p>
+        </div>
+      </section>
+
+      <!-- Section 1.6 Summary -->
+      <section class="lesson-section summary-box">
+        <h2>1.6 Chapter Summary <span class="time-tag">⏱️ 95–97 min</span></h2>
+        <ul class="cute-list">
+          <li>Computational thinking is a formal way of solving problems.</li>
+          <li>The four pillars are decomposition, pattern recognition, abstraction, and algorithm design.</li>
+          <li>These pillars help us solve problems efficiently.</li>
+          <li>Computational thinking applies to real-life problems.</li>
+        </ul>
+      </section>
+
+      <!-- Section 1.7 Key Words -->
+      <section class="lesson-section">
+        <h2>1.7 Key Words</h2>
+        <div class="key-words-table">
+          <div class="key-word-row header">
+            <div>Word</div>
+            <div>Meaning</div>
+          </div>
+          <div class="key-word-row">
+            <div>Computational thinking</div>
+            <div>A formal way of solving problems like a computer scientist</div>
+          </div>
+          <div class="key-word-row">
+            <div>Decomposition</div>
+            <div>Breaking a problem into smaller parts</div>
+          </div>
+          <div class="key-word-row">
+            <div>Pattern recognition</div>
+            <div>Finding similarities or repeating rules</div>
+          </div>
+          <div class="key-word-row">
+            <div>Abstraction</div>
+            <div>Focusing on important details</div>
+          </div>
+          <div class="key-word-row">
+            <div>Algorithm</div>
+            <div>A clear, ordered set of steps</div>
+          </div>
+          <div class="key-word-row">
+            <div>Efficiency</div>
+            <div>Getting the best result with the least effort</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 1.8 Practice + Exit Ticket -->
+      <section class="lesson-section practice-box">
+        <h2>1.8 Practice &amp; Exit Ticket <span class="time-tag">⏱️ 97–100 min</span></h2>
+        <p><strong>Homework:</strong> Choose a complex problem at home and write a full computational thinking analysis. Use the four pillars.</p>
+
+        <div class="exit-ticket">
+          <h4>🎟️ Exit Ticket — Complete before you leave</h4>
+          <p>In one sentence, explain what computational thinking is.</p>
+          <p>Then list the four pillars:</p>
+          <ol class="cute-list numbered">
+            <li>______________________</li>
+            <li>______________________</li>
+            <li>______________________</li>
+            <li>______________________</li>
+          </ol>
+        </div>
+
+        <p class="reflection-prompt">🦁 <em>“Hakuna Matata — but always break it down!”</em></p>
+      </section>
+
+    </div> <!-- end lesson-content -->
+
+    <!-- ===== TEACHER ANNOUNCEMENT BOX (grows with content) ===== -->
+    <!--
+      📢 TEACHER ANNOUNCEMENT BOX
+      ─────────────────────────────────────────────────────────
+      This block grows automatically when you add <li> items.
+      Replace the example <li> below with your own announcements.
+    -->
+    <div class="announcement-box" id="teacherAnnouncement">
+      <h3 class="announcement-title">📢 Announcements</h3>
+      <ol class="announcement-list">
+        <li><em>Announcement space — your teacher will add messages here later.</em></li>
+      </ol>
+    </div>
+
+    <!-- ===== NAVIGATION / FOOTER ===== -->
+    <div class="lesson-nav">
+      <a href="index.html" class="nav-button back-to-index">⬅️ Back to Index</a>
+      <span class="nav-spacer"></span>
+      <a href="unit1-ch2.html" class="nav-button next-lesson">Next: Chapter 2 ➡️</a>
+    </div>
+
+    <div class="footer-note" style="margin-top: 2rem;">
+      <span>🦁</span> Unit 1 · Chapter 1 — Computational Thinking <span>💡</span>
+    </div>
+
+  </div> <!-- end book-container -->
+
+  <!-- External JavaScript (inside js folder) -->
+  <script src="js/script.js"></script>
+</body>
+</html>
