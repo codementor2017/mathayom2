@@ -4,16 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unit 3 · Chapter 1: What is a Computer System?</title>
+  <!-- External CSS (inside css folder) -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon / emoji -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>">
 </head>
 <body>
+
   <div class="book-container lesson-page">
 
+    <!-- ===== HEADER / TITLE ===== -->
     <header class="lesson-header">
       <div class="lesson-badge">Unit 3 · Chapter 1</div>
       <h1>What is a Computer System?</h1>
       <p class="lesson-subhead">🧩 Five parts, one team — hardware, software, data, people, procedures!</p>
+
       <div class="lesson-meta">
         <span class="meta-pill">⏱️ 100 minutes</span>
         <span class="meta-pill">🎯 Grade 8</span>
@@ -21,55 +26,79 @@
       </div>
     </header>
 
-    <div class="lesson-image-display" role="img" aria-label="Cartoon lion cub looking at the five components of a computer system">
-      <div class="image-placeholder-inner">
-        <div class="image-placeholder-icon">🖼️</div>
-        <div class="image-placeholder-text">
-          <strong>IMAGE PLACEHOLDER — Unit 3, Chapter 1</strong>
-          <p>
-            A bright, flat cartoon in Lion King style. A young lion cub (like Simba) stands in
-            the middle of a savanna clearing surrounded by five floating icons connected by
-            glowing golden lines:
-            🖥️ Hardware (a monitor and keyboard)
-            📀 Software (a CD or app icon)
-            📊 Data (a bar chart with numbers)
-            🧑 People (small cartoon animals using devices)
-            📋 Procedures (a scroll checklist)
-            A wise older lion (Rafiki) points at the five components, smiling.
-            Floating icons: 🖥️ 📀 📊 🧑 📋. Background: savanna at sunrise, acacia trees.
-            Caption at bottom: “Five parts working together!”
-          </p>
-          <p class="image-placeholder-hint">Recommended size: 1200 × 400 px (wide banner)</p>
-        </div>
-      </div>
-    </div>
+    <!-- ============================================================
+         🖼️  IMAGE SLOT
+         ────────────────────────────────────────────────────────────
+         Write your image link inside the quotes below (src="").
+         Example:   src="images/unit3-ch1-hero.png"
 
+         Recommended size: 1200 × 400 px (wide banner).
+         If the image is missing, the browser will show a broken
+         icon, but the rest of the page will still work fine.
+
+         IMAGE DESCRIPTION (for the artist):
+         A bright, flat cartoon in Lion King style. A young lion cub
+         (like Simba) stands in the middle of a savanna clearing
+         surrounded by five floating icons connected by glowing
+         golden lines: 🖥️ Hardware, 📀 Software, 📊 Data, 🧑 People,
+         📋 Procedures. A wise older lion (Rafiki) points at the
+         five components, smiling. Background: savanna at sunrise,
+         acacia trees. Caption: “Five parts working together!”
+         ============================================================ -->
+    <img src="images/unit3-ch1-hero.png" alt="Cartoon lion cub looking at the five components of a computer system" class="lesson-image-display">
+
+    <!-- ===== LESSON PLAN OVERVIEW ===== -->
     <section class="lesson-section lesson-plan-overview">
       <h2>📅 Lesson Plan Overview (100 minutes)</h2>
       <div class="timeline">
-        <div class="timeline-item"><div class="timeline-time">0–10 min</div><div class="timeline-content"><strong>Warm-Up:</strong> Are all devices computers?</div></div>
-        <div class="timeline-item"><div class="timeline-time">10–30 min</div><div class="timeline-content"><strong>Direct Teaching:</strong> The five components of a computer system.</div></div>
-        <div class="timeline-item"><div class="timeline-time">30–50 min</div><div class="timeline-content"><strong>Guided Practice:</strong> Analyze a school attendance system.</div></div>
-        <div class="timeline-item"><div class="timeline-time">50–60 min</div><div class="timeline-content"><strong>Break:</strong> Stretch, hydrate 🦁</div></div>
-        <div class="timeline-item"><div class="timeline-time">60–85 min</div><div class="timeline-content"><strong>Group Activity:</strong> Analyze a real system (5 components).</div></div>
-        <div class="timeline-item"><div class="timeline-time">85–95 min</div><div class="timeline-content"><strong>Sharing:</strong> Groups present their posters.</div></div>
-        <div class="timeline-item"><div class="timeline-time">95–100 min</div><div class="timeline-content"><strong>Exit Ticket:</strong> One-sentence summary + practice.</div></div>
+        <div class="timeline-item">
+          <div class="timeline-time">0–10 min</div>
+          <div class="timeline-content"><strong>Warm-Up:</strong> Are all devices computers?</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">10–30 min</div>
+          <div class="timeline-content"><strong>Direct Teaching:</strong> The five components of a computer system.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">30–50 min</div>
+          <div class="timeline-content"><strong>Guided Practice:</strong> Analyze a school attendance system.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">50–60 min</div>
+          <div class="timeline-content"><strong>Break:</strong> Stretch, hydrate 🦁</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">60–85 min</div>
+          <div class="timeline-content"><strong>Group Activity:</strong> Analyze a real system (5 components).</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">85–95 min</div>
+          <div class="timeline-content"><strong>Sharing:</strong> Groups present their posters.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">95–100 min</div>
+          <div class="timeline-content"><strong>Exit Ticket:</strong> One-sentence summary + practice.</div>
+        </div>
       </div>
     </section>
 
+    <!-- ===== LESSON CONTENT ===== -->
     <div class="lesson-content">
 
+      <!-- Section 1.1 -->
       <section class="lesson-section">
         <h2>1.1 What Makes Something a Computer? <span class="time-tag">⏱️ 0–10 min</span></h2>
         <p>Think about the devices you use every day: a smartphone, a laptop, a smart TV, an ATM, a calculator, a smartwatch.</p>
         <p><strong>Are all of these computers? Why or why not?</strong></p>
         <p>A <strong>computer</strong> is a device that processes data. It takes <strong>input</strong>, works on it, produces <strong>output</strong>, and often <strong>stores</strong> the result. But a computer is not just hardware. It is a <strong>system</strong> — a group of parts working together toward a common goal.</p>
+
         <div class="think-box">
           <strong>🗣️ Think–Pair–Share (2 minutes):</strong>
           <p>Is a calculator a computer? What about a smart TV? Share your reasoning with a partner.</p>
         </div>
       </section>
 
+      <!-- Section 1.2 -->
       <section class="lesson-section">
         <h2>1.2 The Five Components of a Computer System <span class="time-tag">⏱️ 10–30 min</span></h2>
         <p>Every computer system has <strong>five components</strong>:</p>
@@ -97,13 +126,14 @@
           </div>
         </div>
 
-        <p>A computer system is not just hardware. It includes software, data, people, and procedures <strong>working together</strong>.</p>
+        <p>A computer system is <strong>not just hardware</strong>. It includes software, data, people, and procedures <strong>working together</strong>.</p>
 
         <div class="teacher-tip">
           <strong>👩‍🏫 Tip:</strong> Use a physical analogy — a computer is like a school. Hardware = the building; software = the lesson plans; data = student records; people = students and teachers; procedures = rules and schedules.
         </div>
       </section>
 
+      <!-- Section 1.3 -->
       <section class="lesson-section">
         <h2>1.3 A Real-Life Example: A School Attendance System <span class="time-tag">⏱️ 30–50 min</span></h2>
         <p>Let's look at a school attendance system.</p>
@@ -146,11 +176,13 @@
         </div>
       </section>
 
+      <!-- ===== BREAK ===== -->
       <section class="lesson-section break-box">
         <h2>☕ Break Time <span class="time-tag">⏱️ 50–60 min</span></h2>
         <p>Stretch, hydrate, and reset your brain. When you return, you'll analyze a real system! 🦁</p>
       </section>
 
+      <!-- Section 1.4 Activity -->
       <section class="lesson-section activity-box">
         <h2>1.4 Group Activity: Analyze a Real System <span class="time-tag">⏱️ 60–85 min</span></h2>
         <p><strong>Work in a group of 3–4.</strong> Your teacher will give you a system:</p>
@@ -179,6 +211,7 @@
         </div>
       </section>
 
+      <!-- Section 1.4b Sharing -->
       <section class="lesson-section">
         <h2>1.4b Sharing &amp; Presentations <span class="time-tag">⏱️ 85–95 min</span></h2>
         <p>Each group presents their system analysis poster.</p>
@@ -188,6 +221,7 @@
         </div>
       </section>
 
+      <!-- Section 1.5 Summary -->
       <section class="lesson-section summary-box">
         <h2>1.5 Chapter Summary <span class="time-tag">⏱️ 95–97 min</span></h2>
         <ul class="cute-list">
@@ -198,26 +232,62 @@
         </ul>
       </section>
 
+      <!-- Section 1.6 Key Words -->
       <section class="lesson-section">
         <h2>1.6 Key Words</h2>
         <div class="key-words-table">
-          <div class="key-word-row header"><div>Word</div><div>Meaning</div></div>
-          <div class="key-word-row"><div>Computer system</div><div>A group of parts working together</div></div>
-          <div class="key-word-row"><div>Hardware</div><div>The physical parts</div></div>
-          <div class="key-word-row"><div>Software</div><div>The programs and instructions</div></div>
-          <div class="key-word-row"><div>Data</div><div>Raw facts and information</div></div>
-          <div class="key-word-row"><div>People</div><div>The users of the system</div></div>
-          <div class="key-word-row"><div>Procedures</div><div>The rules and steps for using the system</div></div>
-          <div class="key-word-row"><div>Input</div><div>Data entering the system</div></div>
-          <div class="key-word-row"><div>Process</div><div>Working on the data</div></div>
-          <div class="key-word-row"><div>Output</div><div>The result</div></div>
-          <div class="key-word-row"><div>Storage</div><div>Saving data for later</div></div>
+          <div class="key-word-row header">
+            <div>Word</div>
+            <div>Meaning</div>
+          </div>
+          <div class="key-word-row">
+            <div>Computer system</div>
+            <div>A group of parts working together</div>
+          </div>
+          <div class="key-word-row">
+            <div>Hardware</div>
+            <div>The physical parts</div>
+          </div>
+          <div class="key-word-row">
+            <div>Software</div>
+            <div>The programs and instructions</div>
+          </div>
+          <div class="key-word-row">
+            <div>Data</div>
+            <div>Raw facts and information</div>
+          </div>
+          <div class="key-word-row">
+            <div>People</div>
+            <div>The users of the system</div>
+          </div>
+          <div class="key-word-row">
+            <div>Procedures</div>
+            <div>The rules and steps for using the system</div>
+          </div>
+          <div class="key-word-row">
+            <div>Input</div>
+            <div>Data entering the system</div>
+          </div>
+          <div class="key-word-row">
+            <div>Process</div>
+            <div>Working on the data</div>
+          </div>
+          <div class="key-word-row">
+            <div>Output</div>
+            <div>The result</div>
+          </div>
+          <div class="key-word-row">
+            <div>Storage</div>
+            <div>Saving data for later</div>
+          </div>
         </div>
       </section>
 
+      <!-- Section 1.7 Practice + Exit Ticket -->
       <section class="lesson-section practice-box">
         <h2>1.7 Practice &amp; Exit Ticket <span class="time-tag">⏱️ 97–100 min</span></h2>
         <p><strong>Homework:</strong> Choose a computer system at home (smart TV, gaming console, router) and write its five components.</p>
+
         <div class="exit-ticket">
           <h4>🎟️ Exit Ticket — Complete before you leave</h4>
           <p>In one sentence, explain what a computer system is.</p>
@@ -230,11 +300,13 @@
             <li>______________________</li>
           </ol>
         </div>
+
         <p class="reflection-prompt">🦁 <em>“A system is only as strong as its weakest part.”</em></p>
       </section>
 
-    </div>
+    </div> <!-- end lesson-content -->
 
+    <!-- ===== TEACHER ANNOUNCEMENT BOX (grows with content) ===== -->
     <div class="announcement-box" id="teacherAnnouncement">
       <h3 class="announcement-title">📢 Announcements</h3>
       <ol class="announcement-list">
@@ -242,6 +314,7 @@
       </ol>
     </div>
 
+    <!-- ===== NAVIGATION / FOOTER ===== -->
     <div class="lesson-nav">
       <a href="unit3-intro.html" class="nav-button back-to-index">⬅️ Previous: Unit 3 Intro</a>
       <span class="nav-spacer"></span>
@@ -252,7 +325,9 @@
       <span>🦁</span> Unit 3 · Chapter 1 — Computer Systems <span>🧩</span>
     </div>
 
-  </div>
+  </div> <!-- end book-container -->
+
+  <!-- External JavaScript (inside js folder) -->
   <script src="js/script.js"></script>
 </body>
 </html>
